@@ -2,12 +2,12 @@ import React from 'react'
 import DashboardLayout from 'examples/LayoutContainers/DashboardLayout'
 import DashboardNavbar from 'examples/Navbars/DashboardNavbar'
 
-function Report() {
+function Analysis() {
   return (
-    <DashboardLayout>
-      <DashboardNavbar/>
-    </DashboardLayout>
+      <DashboardLayout>
+          <DashboardNavbar/>
+      </DashboardLayout>
   )
 }
 
-export default Report
+export default Analysis

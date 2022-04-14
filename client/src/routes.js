@@ -5,6 +5,8 @@ import Billing from "layouts/billing";
 import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
+import Report from "layouts/report/Report";
+import Analysis from "layouts/analysis/Analysis";
 
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -21,6 +23,25 @@ const routes = [
     route: "/dashboard",
     icon: <IoHome size="15px" color="inherit" />,
     component: Dashboard,
+    noCollapse: true,
+  },
+  
+  {
+    type: "collapse",
+    name: "Report",
+    key: "Report",
+    route: "/Report",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Report,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Analysis",
+    key: "Analysis",
+    route: "/Analysis",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Analysis,
     noCollapse: true,
   },
   {
