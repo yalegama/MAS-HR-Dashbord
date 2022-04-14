@@ -56,35 +56,30 @@ function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "today's money", fontWeight: "regular" }}
-                count="$53,000"
-                percentage={{ color: "success", text: "+55%" }}
+                title={{ text: "", fontWeight: "regular" }}
+                count="Direct ETO"
+                percentage={{ color: "success", text: "55%" }}
                 icon={{ color: "info", component: <IoWallet size="22px" color="white" /> }}
               />
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "today's users" }}
-                count="2,300"
+                title={{ text: "" }}
+                count="Indirect ETO"
                 percentage={{ color: "success", text: "+3%" }}
                 icon={{ color: "info", component: <IoGlobe size="22px" color="white" /> }}
               />
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "new clients" }}
-                count="+3,462"
+                title={{ text: "" }}
+                count="Total ETO"
                 percentage={{ color: "error", text: "-2%" }}
                 icon={{ color: "info", component: <IoDocumentText size="22px" color="white" /> }}
               />
             </Grid>
             <Grid item xs={12} md={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "total sales" }}
-                count="$103,430"
-                percentage={{ color: "success", text: "+5%" }}
-                icon={{ color: "info", component: <FaShoppingCart size="20px" color="white" /> }}
-              />
+              
             </Grid>
           </Grid>
         </VuiBox>

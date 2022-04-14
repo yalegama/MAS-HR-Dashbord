@@ -7,6 +7,7 @@ import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
 import Report from "layouts/report/Report";
 import Analysis from "layouts/analysis/Analysis";
+import Menu from "layouts/menu/Menu";
 
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -60,6 +61,15 @@ const routes = [
     route: "/billing",
     icon: <BsCreditCardFill size="15px" color="inherit" />,
     component: Billing,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Menu",
+    key: "Menu",
+    route: "/Menu",
+    icon: <BsCreditCardFill size="15px" color="inherit" />,
+    component: Menu,
     noCollapse: true,
   },
   
