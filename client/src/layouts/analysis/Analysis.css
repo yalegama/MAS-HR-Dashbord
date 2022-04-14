@@ -1,0 +1,10 @@
+.select{
+    background-color: aliceblue;
+}
+
+.form{
+    margin: 5px;
+}
+.formSelect{
+    display: flex;
+}

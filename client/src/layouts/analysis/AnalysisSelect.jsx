@@ -1,18 +1,13 @@
 import React from 'react'
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout'
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar'
-import HorizantalBarChart from 'examples/Charts/HorizantalBarChart/HorizantalBarChart'
-import Card from "@mui/material/Card";
-import VuiTypography from 'components/VuiTypography'
-import VuiBox from 'components/VuiBox';
-import { FormControl, MenuItem, Select } from '@material-ui/core';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import "../analysis/Analysis.css"
 
 
-function Report() {
+function AnalysisSelect() {
   return (
-    <DashboardLayout>
-      <DashboardNavbar/>
-      <div className='formSelect'>
+    <div className='formSelect'>
 <div className='form'>
 <FormControl>
             <Select className='select'>
@@ -42,21 +37,7 @@ function Report() {
         </FormControl>
 </div>
     </div>
-      
-      <Card id="delete-account">
-      <VuiBox>
-        <VuiTypography variant="lg" color="white" fontWeight="bold">
-          Billing Information
-        </VuiTypography>
-      </VuiBox>
-      <VuiBox>
-        <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-          <HorizantalBarChart/>
-        </VuiBox>
-      </VuiBox>
-    </Card>
-    </DashboardLayout>
   )
 }
 
-export default Report
+export default AnalysisSelect
