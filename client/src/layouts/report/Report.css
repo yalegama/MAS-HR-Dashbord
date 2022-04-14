@@ -13,4 +13,21 @@
 .formControll{
     display: flex;
     margin: 5px;
+    margin-bottom: 5vh;
+}
+
+.chart{
+    margin-top: 15px;
+    color: aliceblue;
+}
+.table{
+    margin-top: 10px;
+    width: 100%;
+}
+.mainbox{
+    display: flex;
+    width: 100%;
+}
+.box{
+    width: 80%;
 }

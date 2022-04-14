@@ -53,12 +53,12 @@ function HorizantalBarChart() {
           }
         },
         title: {
-            text: 'Custom DataLabels',
+            text: '',
             align: 'center',
             floating: true
         },
         subtitle: {
-            text: 'Category Names as DataLabels inside bars',
+            text: '',
             align: 'center',
         },
         tooltip: {
