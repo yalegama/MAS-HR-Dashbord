@@ -12,6 +12,14 @@ app.use(express.json());
 app.use(bodyparser.urlencoded({extended:true}))
 
 
+// -> Create a connection to the database
+const connection = mysql.createConnection({
+	host: 'localhost',
+	user: 'root',
+	password: '',
+	database: 'synergydashboard'
+});
+
 // Import CSV Data to MySQL database
 importCsvData2MySQL('customers.csv');
 
@@ -27,13 +35,7 @@ function importCsvData2MySQL(filename){
 			// -> Remove Header ROW
 			csvData.shift();
 			
-			// -> Create a connection to the database
-			const connection = mysql.createConnection({
-				host: 'localhost',
-				user: 'root',
-				password: '',
-				database: 'synergydashboard'
-			});
+			
 
 			// Open the MySQL connection
 			connection.connect((error) => {
@@ -50,6 +52,18 @@ function importCsvData2MySQL(filename){
 
 	stream.pipe(csvStream);
 }
+
+
+//eto details
+app.get("/etodetails",(req,res)=>{
+	const etoDetails="SELECT * FROM etoreport ";
+	connection.query(etoDetails,(err,result)=>{
+		res.send(result)
+	})
+})
+
+
+
 
 app.listen(PORT,(req,res)=>{
 	console.log(`Server is started on ${PORT}`)
