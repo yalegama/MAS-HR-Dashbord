@@ -42,7 +42,7 @@ function importCsvData2MySQL(filename){
 				if (error) {
 					console.error(error);
 				} else {
-					let query = 'INSERT INTO etoreport (date,teamarea,internalcarder,actualcarder,vop,resign,total,voppercentage, etopercentage,area,shift,vsl,er,gl,godfather,lokuakka ) VALUES ?';
+					let query = 'INSERT INTO etoreport (date,teamarea,internalcarder,actualcarder,vop,resign,total,voppercentage, etopercentage,area,shift,vsl,er,gl,godfather,lokuakka,day ) VALUES ?';
 					connection.query(query, [csvData], (error, response) => {
 						console.log(error || response);
 					});
@@ -75,18 +75,23 @@ app.get("/etodetails/:id",(req,res)=>{
 	})
 })
 
-//eto detais by date
 
-app.get("/etodetails/:date",(req,res)=>{
+//eto details by day
 
+app.get("/etodetailsday/:day",(req,res)=>{
 
-	const dataDate=req.params.date;
+	const dataDay=req.params.day;
 
-	const etoDetailsId=`SELECT * FROM etoreport WHERE date=?`;
-	connection.query(etoDetailsId,dataDate,(err,result)=>{
+	const etoDetailsDay=`SELECT * FROM etoreport WHERE day=?`;
+
+	connection.query(etoDetailsDay,dataDay,(err,result)=>{
 		res.send(result)
 	})
+
+
 })
+
+
 
 
 
