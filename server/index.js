@@ -62,6 +62,31 @@ app.get("/etodetails",(req,res)=>{
 	})
 })
 
+//eto details by id
+
+app.get("/etodetails/:id",(req,res)=>{
+
+
+	const dataId=req.params.id;
+
+	const etoDetailsId=`SELECT * FROM etoreport WHERE id=?`;
+	connection.query(etoDetailsId,dataId,(err,result)=>{
+		res.send(result)
+	})
+})
+
+//eto detais by date
+
+app.get("/etodetails/:date",(req,res)=>{
+
+
+	const dataDate=req.params.date;
+
+	const etoDetailsId=`SELECT * FROM etoreport WHERE date=?`;
+	connection.query(etoDetailsId,dataDate,(err,result)=>{
+		res.send(result)
+	})
+})
 
 
 
