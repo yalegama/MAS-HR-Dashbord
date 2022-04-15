@@ -83,6 +83,7 @@ app.get("/etodetailsday/:day",(req,res)=>{
 	const dataDay=req.params.day;
 
 	const etoDetailsDay=`SELECT * FROM etoreport WHERE day=?`;
+	//const etoDetailsDay=`SELECT * FROM etoreport WHERE day=? and id="2913"`;
 
 	connection.query(etoDetailsDay,dataDay,(err,result)=>{
 		res.send(result)
