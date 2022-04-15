@@ -12,13 +12,6 @@ app.use(express.json());
 app.use(bodyparser.urlencoded({extended:true}))
 
 
-const connection = mysql.createConnection({
-	host: 'localhost',
-	user: 'root',
-	password: '',
-	database: 'hrdashboard'
-});
-
 // Import CSV Data to MySQL database
 importCsvData2MySQL('customers.csv');
 
@@ -35,17 +28,21 @@ function importCsvData2MySQL(filename){
 			csvData.shift();
 			
 			// -> Create a connection to the database
-			
+			const connection = mysql.createConnection({
+				host: 'localhost',
+				user: 'root',
+				password: '',
+				database: 'synergydashboard'
+			});
 
 			// Open the MySQL connection
 			connection.connect((error) => {
 				if (error) {
 					console.error(error);
 				} else {
-					let query = 'INSERT INTO etoreport (date, area, internalcarder, actualcarder, vop, resign, total, voppercentage, etop, flowarea, shift, vsl, er, gl, godfather, lokuakka) VALUES ?';
+					let query = 'INSERT INTO etoreport (date,teamarea,internalcarder,actualcarder,vop,resign,total,voppercentage, etopercentage,area,shift,vsl,er,gl,godfather,lokuakka ) VALUES ?';
 					connection.query(query, [csvData], (error, response) => {
 						console.log(error || response);
-                        
 					});
 				}
 			});
@@ -53,26 +50,6 @@ function importCsvData2MySQL(filename){
 
 	stream.pipe(csvStream);
 }
-
-
-
-
-
-app.get("/etodetails",(req,res)=>{
-	const etoDetails="SELECT * FROM etoreport ";
-	connection.query(etoDetails,(err,result)=>{
-		res.send(result)
-	})
-})
-
-app.get("/etoreason",(req,res)=>{
-	const etoReasons="SELECT * FROM etoreasons ";
-	connection.query(etoReasons,(err,result)=>{
-		res.send(result)
-	})
-})
-
-
 
 app.listen(PORT,(req,res)=>{
 	console.log(`Server is started on ${PORT}`)
