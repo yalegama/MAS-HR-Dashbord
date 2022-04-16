@@ -42,7 +42,7 @@ function importCsvData2MySQL(filename){
 				if (error) {
 					console.error(error);
 				} else {
-					let query = 'INSERT INTO etoreport (date,teamarea,internalcarder,actualcarder,vop,resign,total,voppercentage, etopercentage,area,shift,vsl,er,gl,godfather,lokuakka,day ) VALUES ?';
+					let query = 'INSERT INTO etoreport (date,teamarea,internalcarder,actualcarder,vop,resign,total,voppercentage, etopercentage,area,shift,vsl,er,gl,godfather,lokuakka,day,month ) VALUES ?';
 					connection.query(query, [csvData], (error, response) => {
 						console.log(error || response);
 					});
@@ -92,6 +92,39 @@ app.get("/etodetailsday/:day",(req,res)=>{
 
 })
 
+//eto details by month
+
+app.get("/etodetailsmonth/:month",(req,res)=>{
+
+	const dataMonth=req.params.month;
+
+	const etoDetailsMonth=`SELECT * FROM etoreport WHERE month=?`;
+	//const etoDetailsDay=`SELECT * FROM etoreport WHERE day=? and id="2913"`;
+
+	connection.query(etoDetailsMonth,dataMonth,(err,result)=>{
+		res.send(result)
+	})
+
+
+})
+
+
+//eto details by month and day
+
+app.get("/etodetailsmonthmonthandday/monthandday",(req,res)=>{
+
+	const dataMonth=2;
+	const dataDay=1;
+
+	const etoDetailsMonthDay=`SELECT * FROM etoreport WHERE month=${dataMonth} and day=${dataDay}`;
+	//const etoDetailsDay=`SELECT * FROM etoreport WHERE day=? and id="2913"`;
+
+	connection.query(etoDetailsMonthDay,dataMonth,(err,result)=>{
+		res.send(result)
+	})
+
+
+})
 
 
 
