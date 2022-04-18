@@ -98,7 +98,7 @@ app.get("/etodetailsmonth/:month",(req,res)=>{
 
 	const dataMonth=req.params.month;
 
-	const etoDetailsMonth=`SELECT * FROM etoreport WHERE month=?`;
+	const etoDetailsMonth=`SELECT * FROM etoreport WHERE month=? `;
 	//const etoDetailsDay=`SELECT * FROM etoreport WHERE day=? and id="2913"`;
 
 	connection.query(etoDetailsMonth,dataMonth,(err,result)=>{
@@ -111,10 +111,10 @@ app.get("/etodetailsmonth/:month",(req,res)=>{
 
 //eto details by month and day
 
-app.get("/etodetailsmonthmonthandday/monthandday",(req,res)=>{
+app.get("/etodetailsmonthmonthandday/:month/:day",(req,res)=>{
 
-	const dataMonth=2;
-	const dataDay=1;
+	const dataMonth=req.params.month;
+	const dataDay=req.params.day;
 
 	const etoDetailsMonthDay=`SELECT * FROM etoreport WHERE month=${dataMonth} and day=${dataDay}`;
 	//const etoDetailsDay=`SELECT * FROM etoreport WHERE day=? and id="2913"`;
@@ -125,6 +125,8 @@ app.get("/etodetailsmonthmonthandday/monthandday",(req,res)=>{
 
 
 })
+
+
 
 
 
