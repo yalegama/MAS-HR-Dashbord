@@ -1,13 +1,13 @@
 
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
-import Billing from "layouts/billing";
 import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
 import Report from "layouts/report/Report";
 import Analysis from "layouts/analysis/Analysis";
 import Menu from "layouts/menu/Menu";
+import Details from "layouts/details/Details";
 
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -36,6 +36,7 @@ const routes = [
     component: Report,
     noCollapse: true,
   },
+  
   {
     type: "collapse",
     name: "Analysis",
@@ -47,6 +48,15 @@ const routes = [
   },
   {
     type: "collapse",
+    name: "Details",
+    key: "Details",
+    route: "/Details",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Details,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
     name: "Tables",
     key: "tables",
     route: "/tables",
@@ -54,15 +64,7 @@ const routes = [
     component: Tables,
     noCollapse: true,
   },
-  {
-    type: "collapse",
-    name: "Billing",
-    key: "billing",
-    route: "/billing",
-    icon: <BsCreditCardFill size="15px" color="inherit" />,
-    component: Billing,
-    noCollapse: true,
-  },
+  
   {
     type: "collapse",
     name: "Menu",

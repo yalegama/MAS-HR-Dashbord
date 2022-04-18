@@ -123,6 +123,19 @@ app.get("/etodetailsmonthmonthandday/:month/:day",(req,res)=>{
 		res.send(result)
 	})
 
+})
+
+app.get("/etodetailspercentage/:month/:day",(req,res)=>{
+
+	const dataMonth=req.params.month;
+	const dataDay=req.params.day;
+
+	const etoDetailsMonthDay=`SELECT sum(etopercentage),sum(vop) FROM etoreport WHERE month=${dataMonth} and day=${dataDay} `;
+	//const etoDetailsDay=`SELECT * FROM etoreport WHERE day=? and id="2913"`;
+
+	connection.query(etoDetailsMonthDay,dataMonth,(err,result)=>{
+		res.send(result)
+	})
 
 })
 

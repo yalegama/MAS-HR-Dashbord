@@ -9,7 +9,9 @@ import { DataGrid } from '@material-ui/data-grid';
 import "../report/Report.css"
 import axios from 'axios';
 import ReactApexChart from 'react-apexcharts';
-
+import Grid from "@mui/material/Grid";
+import MiniStatisticsCard from 'examples/Cards/StatisticsCards/MiniStatisticsCard';
+import { IoDocumentText, IoGlobe, IoWallet } from 'react-icons/io5';
 
 function Report() {
 
@@ -41,14 +43,21 @@ function Report() {
       area.push(obj.teamarea);
       
     }
-    console.log(first)
-    console.log(area);
     setfirst(first)
     setarea(area);
   }
+
+  const [percentage, setpercentage] = useState([])
+
+  const loadPercentageData=async()=>{
+    const dataValue=await axios.get(`http://localhost:3001/etodetailspercentage/${month}/${date}`)
+    setpercentage(dataValue)
+  }
+
   useEffect(() => {
     loadData();
-    console.log(data)
+    loadPercentageData();
+    console.log(percentage.Object.etopercentage)
   }, [month,date])
   
 
@@ -86,17 +95,7 @@ function Report() {
     },
   ];
   
-  const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  ];
+ 
   
 
   const series= [{
@@ -238,7 +237,39 @@ function Report() {
         </FormControl>
 </div>
     </div>
-      
+      <div>
+      <VuiBox mb={3}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6} xl={3}>
+              <MiniStatisticsCard
+                title={{ text: "", fontWeight: "regular" }}
+                count="Direct ETO"
+                percentage={{ color: "success", text: "55%" }}
+                icon={{ color: "info", component: <IoWallet size="22px" color="white" /> }}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} xl={3}>
+              <MiniStatisticsCard
+                title={{ text: "" }}
+                count="Indirect ETO"
+                percentage={{ color: "success", text: "+3%" }}
+                icon={{ color: "info", component: <IoGlobe size="22px" color="white" /> }}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} xl={3}>
+              <MiniStatisticsCard
+                title={{ text: "" }}
+                count="Total ETO"
+                percentage={{ color: "error", text: "-2%" }}
+                icon={{ color: "info", component: <IoDocumentText size="22px" color="white" /> }}
+              />
+            </Grid>
+            <Grid item xs={12} md={6} xl={3}>
+              
+            </Grid>
+          </Grid>
+        </VuiBox>
+      </div>
       <div className='chart'>
       <Card id="delete-account">
       <VuiBox>
