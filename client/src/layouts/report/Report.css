@@ -3,6 +3,9 @@
     display: flex;
     
 }
+.formControl{
+    margin: 5px;
+}
 .form{
     display: flex;
 }

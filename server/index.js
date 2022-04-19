@@ -23,6 +23,7 @@ const connection = mysql.createConnection({
 // Import CSV Data to MySQL database
 importCsvData2MySQL('customers.csv');
 
+
 function importCsvData2MySQL(filename){
 	let stream = fs.createReadStream(filename);
 	let csvData = [];
@@ -52,6 +53,40 @@ function importCsvData2MySQL(filename){
 
 	stream.pipe(csvStream);
 }
+
+importCsvintoData2MySQL('dashboard1.csv');
+
+function importCsvintoData2MySQL(filename){
+	let stream = fs.createReadStream(filename);
+	let csvData = [];
+	let csvStream = csv
+		.parse()
+		.on("data", function (data) {
+			csvData.push(data);
+		})
+		.on("end", function () {
+			// -> Remove Header ROW
+			csvData.shift();
+			
+			
+
+			// Open the MySQL connection
+			connection.connect((error) => {
+				if (error) {
+					console.error(error);
+				} else {
+					let query = 'INSERT INTO etoreasons (date,epf,firstname,lastname,team,resign,reason,service, age,grading,tl,area,shift,vsl,er,gl,godfather,lokuakka ) VALUES ?';
+					connection.query(query, [csvData], (error, response) => {
+						console.log(error || response);
+					});
+				}
+			});
+		});
+
+	stream.pipe(csvStream);
+}
+
+
 
 
 //eto details

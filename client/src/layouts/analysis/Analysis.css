@@ -8,3 +8,9 @@
 .formSelect{
     display: flex;
 }
+.charts{
+    display: flex;
+}
+.chartOne{
+    margin-left: 190px;
+}

@@ -8,6 +8,8 @@ import Report from "layouts/report/Report";
 import Analysis from "layouts/analysis/Analysis";
 import Menu from "layouts/menu/Menu";
 import Details from "layouts/details/Details";
+import Reasons from "layouts/Reasons/Reasons";
+import Informations from "layouts/informations/Informations";
 
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -53,6 +55,24 @@ const routes = [
     route: "/Details",
     icon: <IoStatsChart size="15px" color="inherit" />,
     component: Details,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Informations",
+    key: "Informations",
+    route: "/Informations",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Informations,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Reasons",
+    key: "Reasons",
+    route: "/Reasons",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Reasons,
     noCollapse: true,
   },
   {
