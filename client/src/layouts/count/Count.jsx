@@ -8,6 +8,9 @@ import Vsl from './components/Vsl';
 import Er from './components/Er';
 import Gl from './components/Gl';
 import Godfather from './components/Godfather';
+import Card from "@mui/material/Card";
+import VuiBox from 'components/VuiBox';
+import VuiTypography from 'components/VuiTypography';
 
 function Count() {
 
@@ -97,7 +100,16 @@ function Count() {
           <DashboardNavbar/>
           <div className='column'>
           <div className='chart'>
-          <ReactApexChart options={options} series={series} type="pie" width={440} />
+          
+          <Card id="delete-account">
+      <VuiBox>
+      </VuiBox>
+      <VuiBox>
+        <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+        <ReactApexChart options={options} series={series} type="pie" width={440} />
+        </VuiBox>
+      </VuiBox>
+    </Card>
           </div>
           <div className='chart'>
           <Vsl/>

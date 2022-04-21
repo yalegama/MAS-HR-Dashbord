@@ -38,7 +38,7 @@ function Reasons() {
       breakpoint: 480,
       options: {
         chart: {
-          width: 200
+          width: 200,
         },
         legend: {
           position: 'bottom'

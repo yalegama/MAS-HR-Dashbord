@@ -1,6 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import ReactApexChart from 'react-apexcharts';
+import Card from "@mui/material/Card";
+import VuiBox from 'components/VuiBox';
+import VuiTypography from 'components/VuiTypography';
+import Bill from 'layouts/billing/components/Bill';
 
 function Vsl() {
 
@@ -44,9 +48,20 @@ function Vsl() {
     }
 
   return (
-    <div>
-         <ReactApexChart options={options} series={series} type="pie" width={480} />
-    </div>
+      <div>
+          
+
+          <Card id="delete-account">
+      <VuiBox>
+      </VuiBox>
+      <VuiBox>
+        <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+        <ReactApexChart options={options} series={series} type="pie" width={580} />
+        </VuiBox>
+      </VuiBox>
+    </Card>
+      </div>
+
   )
 }
 

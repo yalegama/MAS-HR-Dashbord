@@ -242,6 +242,16 @@ app.get("/allreasonsingodfather",(req,res)=>{
 })
 
 
+//all area Wise
+app.get("/allareawise",(req,res)=>{
+	const allAreaWise="SELECT area, COUNT(*) AS 'areatotal' FROM etoreasons GROUP BY area";
+	connection.query(allAreaWise,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+
 
 
 

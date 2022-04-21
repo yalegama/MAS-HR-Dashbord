@@ -1,12 +1,9 @@
 
-// @mui material components
 import Card from "@mui/material/Card";
 
-// Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 
-// Billing page components
 import Bill from "layouts/billing/components/Bill";
 
 function BillingInformation() {

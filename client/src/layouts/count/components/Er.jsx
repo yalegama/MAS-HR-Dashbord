@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import ReactApexChart from 'react-apexcharts';
+import Card from "@mui/material/Card";
+import VuiBox from 'components/VuiBox';
+import VuiTypography from 'components/VuiTypography';
 
 
 function Er() {
@@ -95,7 +98,21 @@ function Er() {
 
   return (
     <div>
+        
+
+        <Card id="delete-account">
+      <VuiBox>
+        <VuiTypography variant="lg" color="white" fontWeight="bold">
+          ER Wise
+        </VuiTypography>
+      </VuiBox>
+      <VuiBox>
+        <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
         <ReactApexChart options={options} series={series} type="bar" height={350} />
+        </VuiBox>
+      </VuiBox>
+    </Card>
+    
     </div>
   )
 }
