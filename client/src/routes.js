@@ -10,6 +10,7 @@ import Menu from "layouts/menu/Menu";
 import Details from "layouts/details/Details";
 import Reasons from "layouts/Reasons/Reasons";
 import Informations from "layouts/informations/Informations";
+import Count from "layouts/count/Count";
 
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -73,6 +74,15 @@ const routes = [
     route: "/Reasons",
     icon: <IoStatsChart size="15px" color="inherit" />,
     component: Reasons,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Count",
+    key: "Count",
+    route: "/Count",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Count,
     noCollapse: true,
   },
   {

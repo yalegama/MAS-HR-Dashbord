@@ -21,7 +21,8 @@ const connection = mysql.createConnection({
 });
 
 // Import CSV Data to MySQL database
-importCsvData2MySQL('customers.csv');
+// importCsvData2MySQL('customers.csv');
+importCsvintoData2MySQL('dashboard1.csv');
 
 
 function importCsvData2MySQL(filename){
@@ -54,7 +55,7 @@ function importCsvData2MySQL(filename){
 	stream.pipe(csvStream);
 }
 
-importCsvintoData2MySQL('dashboard1.csv');
+
 
 function importCsvintoData2MySQL(filename){
 	let stream = fs.createReadStream(filename);
@@ -93,6 +94,15 @@ function importCsvintoData2MySQL(filename){
 app.get("/etodetails",(req,res)=>{
 	const etoDetails="SELECT * FROM etoreport ";
 	connection.query(etoDetails,(err,result)=>{
+		res.send(result)
+	})
+})
+
+//informations all data
+//eto details
+app.get("/informations",(req,res)=>{
+	const informations="SELECT * FROM etoreasons ";
+	connection.query(informations,(err,result)=>{
 		res.send(result)
 	})
 })
@@ -174,6 +184,62 @@ app.get("/etodetailspercentage/:month/:day",(req,res)=>{
 
 })
 
+
+//all reasons and count
+app.get("/allreasons",(req,res)=>{
+	const allReasons="SELECT reason, COUNT(*) AS 'total' FROM etoreasons GROUP BY reason";
+	connection.query(allReasons,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//all reasons shift Wise
+app.get("/allreasonsinshift",(req,res)=>{
+	const allShiftReasons="SELECT shift, COUNT(*) AS 'shifttotal' FROM etoreasons GROUP BY shift";
+	connection.query(allShiftReasons,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//all reasons vsl Wise
+app.get("/allreasonsinvsl",(req,res)=>{
+	const allVslReasons="SELECT vsl, COUNT(*) AS 'vsltotal' FROM etoreasons GROUP BY vsl";
+	connection.query(allVslReasons,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+
+//all reasons er Wise
+app.get("/allreasonsiner",(req,res)=>{
+	const allErReasons="SELECT er, COUNT(*) AS 'ertotal' FROM etoreasons GROUP BY er";
+	connection.query(allErReasons,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+
+//all reasons gl Wise
+app.get("/allreasonsingl",(req,res)=>{
+	const allGlReasons="SELECT gl, COUNT(*) AS 'gltotal' FROM etoreasons GROUP BY gl";
+	connection.query(allGlReasons,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//all reasons godfather Wise
+app.get("/allreasonsingodfather",(req,res)=>{
+	const allGodFatherReasons="SELECT godfather, COUNT(*) AS 'godfathertotal' FROM etoreasons GROUP BY godfather;";
+	connection.query(allGodFatherReasons,(err,result)=>{
+		res.send(result)
+	})
+
+})
 
 
 

@@ -1,0 +1,7 @@
+.column{
+    display: flex;
+}
+.chart{
+    margin: 50px;
+    margin-left: 250px;
+}

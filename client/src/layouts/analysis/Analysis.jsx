@@ -21,13 +21,18 @@ function Analysis() {
     setmonth(e.target.value);
   }
 
-  const series= [44, 55, 13, 43, 22];
+  const [day, setday] = useState('1');
+  const dayChange=(e)=>{
+    setday(e.target.value);
+  }
+
+  const series= [44, 55, 13, 43, 22, 45,91];
   const options= {
     chart: {
       width: 380,
       type: 'pie',
     },
-    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E','Team F','Team G'],
     responsive: [{
       breakpoint: 480,
       options: {
@@ -44,7 +49,7 @@ function Analysis() {
   
   
   const xline= [{
-    data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+    data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380,2500]
   }];
   const yline= {
     chart: {
@@ -84,7 +89,7 @@ function Analysis() {
     },
     xaxis: {
       categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
-        'United States', 'China', 'India'
+        'United States', 'China', 'India','SL'
       ],
     },
     yaxis: {
@@ -144,6 +149,8 @@ function Analysis() {
 <div className='form'>
 <FormControl>
             <Select 
+            value={day}
+            onChange={dayChange}
             className='select'>
             <MenuItem value={1}>1</MenuItem>
             <MenuItem value={2}>2</MenuItem>
@@ -182,9 +189,10 @@ function Analysis() {
 
     <div className='pie'>
     
+      <div className='chartOne'>
       <VuiBox>
         <VuiTypography variant="lg" color="white" fontWeight="bold">
-          Billing Information
+          Gender Wise
         </VuiTypography>
       </VuiBox>
       <VuiBox>
@@ -193,12 +201,24 @@ function Analysis() {
         <div className='chartOne'>
         <ReactApexChart options={options} series={series} type="pie" width={380} />
         </div>
+        </div>
+        </VuiBox>
+      </VuiBox>
+      <VuiBox>
+        <VuiTypography variant="lg" color="white" fontWeight="bold">
+          Gender Wise
+        </VuiTypography>
+      </VuiBox>
+      <VuiBox>
+        <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+        <div className='charts'>
         <div className='chartOne'>
         <ReactApexChart options={options} series={series} type="pie" width={380} />
         </div>
         </div>
         </VuiBox>
       </VuiBox>
+      </div>
     </div>
     <div className='reasonChart'>
     <ReactApexChart options={yline} series={xline} type="bar" height={380} />
