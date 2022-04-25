@@ -8,6 +8,7 @@ import VuiTypography from 'components/VuiTypography';
 import ReactApexChart from 'react-apexcharts';
 import GlVop from './vop/component/GlVop';
 import GodFatherVop from './vop/component/GodFatherVop';
+import LokuakkaVop from './vop/component/LokuakkaVop';
 
 function Indetail() {
   const [data, setdata] = useState([]);
@@ -124,6 +125,9 @@ function Indetail() {
           </div>
           <div>
             <GodFatherVop/>
+          </div>
+          <div>
+            <LokuakkaVop/>
           </div>
 
       </DashboardLayout>

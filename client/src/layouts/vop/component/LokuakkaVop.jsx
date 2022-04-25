@@ -5,18 +5,17 @@ import VuiBox from 'components/VuiBox';
 import VuiTypography from 'components/VuiTypography';
 import ReactApexChart from 'react-apexcharts';
 
-function GodFatherVop() {
+function LokuakkaVop() {
     const [data, setdata] = useState([]);
-    const [godfatherDetails, setgodfatherDetails] = useState([]);
-    const [godfatherCount, setgodfatherCount] = useState([]);
-
+    const [lokuakkaDetails, setlokuakkaDetails] = useState([]);
+    const [lokuakkaCount, setlokuakkaCount] = useState([]);
 
     const locadData=async ()=>{
-        const response=await axios.get("http://localhost:3001/godfatherareavopone");
+        const response=await axios.get("http://localhost:3001/lokuakkaareavopone");
         setdata(response.data);
         for(const obj of response.data){
-            godfatherDetails.push(obj.godfather);
-            godfatherCount.push(obj.vop);
+            lokuakkaDetails.push(obj.lokuakka);
+            lokuakkaCount.push(obj.vop);
         }
     }
 
@@ -30,7 +29,7 @@ function GodFatherVop() {
 
     const series= [{
         name: 'VOP Total',
-        data: godfatherCount
+        data: lokuakkaCount
       }];
       const options= {
         annotations: {
@@ -74,7 +73,7 @@ function GodFatherVop() {
           labels: {
             rotate: -45
           },
-          categories: godfatherDetails,
+          categories: lokuakkaDetails,
           tickPlacement: 'on'
         },
         yaxis: {
@@ -98,11 +97,11 @@ function GodFatherVop() {
       }
 
   return (
-    <div className='godfathercard'>
+    <div className='glcard'>
     <Card id="delete-account">
   <VuiBox>
     <VuiTypography variant="lg" color="white" fontWeight="bold">
-      GodFather  Wise Total VOP 
+      LokuAkka Wise Total VOP 
     </VuiTypography>
   </VuiBox>
 </Card>
@@ -111,4 +110,4 @@ function GodFatherVop() {
   )
 }
 
-export default GodFatherVop
+export default LokuakkaVop

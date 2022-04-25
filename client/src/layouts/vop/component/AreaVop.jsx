@@ -1,7 +1,5 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import Card from "@mui/material/Card";
-import VuiBox from 'components/VuiBox';
 import ReactApexChart from 'react-apexcharts';
 import VslVop from './VslVop';
 import ShiftVop from './ShiftVop';
@@ -55,6 +53,8 @@ function AreaVop() {
     </div>
     <div>
       <ShiftVop/>
+    </div>
+    <div>
     </div>
     </div>
   )

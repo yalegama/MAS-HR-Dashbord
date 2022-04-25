@@ -345,6 +345,15 @@ app.get("/godfatherareavopone",(req,res)=>{
 
 })
 
+//godfather wise all vop
+app.get("/lokuakkaareavopone",(req,res)=>{
+	const lokuakkaareavopone="SELECT lokuakka, SUM(vop) AS 'vop' FROM etoreport GROUP BY lokuakka";
+	connection.query(lokuakkaareavopone,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
 
 
 app.listen(PORT,(req,res)=>{
