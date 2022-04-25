@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react'
 import ReactApexChart from 'react-apexcharts';
 import Card from "@mui/material/Card";
 import VuiBox from 'components/VuiBox';
-import VuiTypography from 'components/VuiTypography';
-import Bill from 'layouts/billing/components/Bill';
 
 function Vsl() {
 

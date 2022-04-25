@@ -12,6 +12,9 @@ import Reasons from "layouts/Reasons/Reasons";
 import Informations from "layouts/informations/Informations";
 import Count from "layouts/count/Count";
 import Review from "layouts/review/Review";
+import Average from "layouts/average/Average";
+import Vop from "layouts/vop/Vop";
+import Indetail from "layouts/Indetail";
 
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -93,6 +96,34 @@ const routes = [
     route: "/Review",
     icon: <IoStatsChart size="15px" color="inherit" />,
     component: Review,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Average",
+    key: "Average",
+    route: "/Average",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Average,
+    noCollapse: true,
+  },
+
+  {
+    type: "collapse",
+    name: "VOP",
+    key: "Vop",
+    route: "/Vop",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Vop,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Indetail",
+    key: "Indetail",
+    route: "/Indetail",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Indetail,
     noCollapse: true,
   },
   {

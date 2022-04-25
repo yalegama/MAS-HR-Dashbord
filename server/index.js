@@ -252,6 +252,98 @@ app.get("/allareawise",(req,res)=>{
 })
 
 
+//all lokuakka Wise
+app.get("/alllokuakkawise",(req,res)=>{
+	const alllokuakkaWise="SELECT lokuakka, COUNT(*) AS 'lokuakkatotal' FROM etoreasons GROUP BY lokuakka;";
+	connection.query(alllokuakkaWise,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//all lokuakka Wise
+app.get("/monthwiseeto",(req,res)=>{
+	const allmonthwiseeto="SELECT month, SUM(etopercentage) AS 'eto' FROM etoreport GROUP BY month";
+	connection.query(allmonthwiseeto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+
+//team area wise all vop
+app.get("/teamareaallvop",(req,res)=>{
+	const teamareaallvop="SELECT teamarea, SUM(vop) AS 'vop' FROM etoreport GROUP BY teamarea;";
+	connection.query(teamareaallvop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//team area wise all vop
+app.get("/monthvop",(req,res)=>{
+	const monthvop="SELECT month , SUM(vop)  AS 'vop' FROM etoreport GROUP BY month";
+	connection.query(monthvop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+
+//team area wise all vop
+app.get("/areavop",(req,res)=>{
+	const areavop="SELECT area, SUM(vop) AS 'vop' FROM etoreport GROUP BY area";
+	connection.query(areavop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//vsl wise all vop
+app.get("/vslareavop",(req,res)=>{
+	const vslareavop="SELECT vsl, SUM(vop) AS 'vop' FROM etoreport GROUP BY vsl";
+	connection.query(vslareavop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//shift wise all vop
+app.get("/shiftareavopone",(req,res)=>{
+	const shiftareavop="SELECT shift, SUM(vop) AS 'vop' FROM etoreport GROUP BY shift";
+	connection.query(shiftareavop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+
+//er wise all vop
+app.get("/erareavopone",(req,res)=>{
+	const erareavopone="SELECT er, SUM(vop) AS 'vop' FROM etoreport GROUP BY er";
+	connection.query(erareavopone,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//gl wise all vop
+app.get("/glareavopone",(req,res)=>{
+	const glareavopone="SELECT gl, SUM(vop) AS 'vop' FROM etoreport GROUP BY gl";
+	connection.query(glareavopone,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//godfather wise all vop
+app.get("/godfatherareavopone",(req,res)=>{
+	const godfather="SELECT godfather, SUM(vop) AS 'vop' FROM etoreport GROUP BY godfather";
+	connection.query(godfather,(err,result)=>{
+		res.send(result)
+	})
+
+})
 
 
 

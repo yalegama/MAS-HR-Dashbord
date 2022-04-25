@@ -3,6 +3,8 @@ import DashboardLayout from 'examples/LayoutContainers/DashboardLayout'
 import DashboardNavbar from 'examples/Navbars/DashboardNavbar'
 import ReactApexChart from 'react-apexcharts';
 import axios from 'axios';
+import "../review/Review.css"
+import Lokuakka from './component/Lokuakka';
 
 
 function Review() {
@@ -25,13 +27,13 @@ function Review() {
     }, [])
     
 
-    const series= [25, 15, 44, 55, 41, 17];
+    const series= areaCount;
            const options= {
               chart: {
                 width: '100%',
                 type: 'pie',
               },
-              labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              labels: areaDetails,
               theme: {
                 monochrome: {
                   enabled: true
@@ -45,7 +47,7 @@ function Review() {
                 }
               },
               title: {
-                text: "Monochrome Pie"
+                text: "Area Wise"
               },
               dataLabels: {
                 formatter(val, opts) {
@@ -62,10 +64,16 @@ function Review() {
   return (
       <DashboardLayout>
           <DashboardNavbar/>
+          <div className='one'>
           <div className='rowOne'>
           <ReactApexChart options={options} series={series} type="pie" width={480} />
           </div>
           <div className='rowOne'>
+          <ReactApexChart options={options} series={series} type="pie" width={480} />
+          </div>
+          </div>
+          <div>
+              <Lokuakka/>
           </div>
       </DashboardLayout>
   )
