@@ -5,6 +5,7 @@ import axios from 'axios';
 import ReactApexChart from 'react-apexcharts';
 import MonthVop from './component/MonthVop';
 import AreaVop from './component/AreaVop';
+import Footer from 'examples/Footer';
 
 function Vop() {
     const [data, setdata] = useState([]);
@@ -121,6 +122,7 @@ const [vop, setvop] = useState([]);
           <div>
           <ReactApexChart options={options} series={series} type="bar" height={2800} />
           </div>
+          <Footer/>
       </DashboardLayout>
   )
 }

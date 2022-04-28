@@ -7,6 +7,7 @@ import VuiBox from 'components/VuiBox';
 import "../average/Average.css"
 import axios from 'axios';
 import Heat from './component/Heat';
+import Footer from 'examples/Footer';
 
 function Average() {
     const [data, setdata] = useState([]);
@@ -101,6 +102,7 @@ function Average() {
           <div>
           <Heat/>
           </div>
+          <Footer/>
       </DashboardLayout>
   )
 }

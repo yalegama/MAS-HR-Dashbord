@@ -3,6 +3,7 @@ import DashboardLayout from 'examples/LayoutContainers/DashboardLayout'
 import DashboardNavbar from 'examples/Navbars/DashboardNavbar'
 import { DataGrid } from '@material-ui/data-grid';
 import axios from 'axios';
+import Footer from 'examples/Footer';
 
 function Informations() {
     const columns = [
@@ -61,6 +62,7 @@ function Informations() {
         disableSelectionOnClick
       />
     </div>
+    <Footer/>
       </DashboardLayout>
   )
 }

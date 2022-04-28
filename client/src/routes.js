@@ -15,6 +15,7 @@ import Review from "layouts/review/Review";
 import Average from "layouts/average/Average";
 import Vop from "layouts/vop/Vop";
 import Indetail from "layouts/Indetail";
+import Month from "layouts/Month/Month";
 
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -51,6 +52,15 @@ const routes = [
     route: "/Analysis",
     icon: <IoStatsChart size="15px" color="inherit" />,
     component: Analysis,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Month",
+    key: "Month",
+    route: "/Month",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Month,
     noCollapse: true,
   },
   {

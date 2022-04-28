@@ -5,6 +5,7 @@ import ReactApexChart from 'react-apexcharts';
 import axios from 'axios';
 import "../review/Review.css"
 import Lokuakka from './component/Lokuakka';
+import Footer from 'examples/Footer';
 
 
 function Review() {
@@ -75,6 +76,7 @@ function Review() {
           <div>
               <Lokuakka/>
           </div>
+          <Footer/>
       </DashboardLayout>
   )
 }

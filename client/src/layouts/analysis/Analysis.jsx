@@ -12,6 +12,8 @@ import { IoDocumentText, IoGlobe, IoWallet } from 'react-icons/io5';
 import ReactApexChart from 'react-apexcharts';
 import Card from 'assets/theme/components/card';
 import VuiTypography from 'components/VuiTypography';
+import Footer from 'examples/Footer';
+import RadarCahrt from 'layouts/dashboard/components/RadarCahrt';
 
 
 function Analysis() {
@@ -223,6 +225,10 @@ function Analysis() {
     <div className='reasonChart'>
     <ReactApexChart options={yline} series={xline} type="bar" height={380} />
     </div>
+    <div>
+      <RadarCahrt/>
+    </div>
+    <Footer/>
       </DashboardLayout>
   )
 }

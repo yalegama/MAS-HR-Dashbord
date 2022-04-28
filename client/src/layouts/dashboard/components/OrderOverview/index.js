@@ -43,17 +43,16 @@ function OrdersOverview() {
     <Card className="h-100">
       <VuiBox mb="16px">
         <VuiTypography variant="lg" fontWeight="bold" mb="5px" color="white">
-          Orders overview
+          Monthly ETO overview
         </VuiTypography>
         <VuiBox mb={2}>
           <VuiBox display="flex" alignItems="center">
             <BsCheckCircleFill color="green" size="15px" mr="5px" />
             <VuiTypography variant="button" color="text" fontWeight="medium" ml="5px" mr="2px">
-              +30%
             </VuiTypography>{" "}
             <VuiTypography variant="button" color="text" fontWeight="regular">
               {" "}
-              this month
+              all months
             </VuiTypography>
           </VuiBox>
         </VuiBox>

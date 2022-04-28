@@ -11,6 +11,7 @@ import Godfather from './components/Godfather';
 import Card from "@mui/material/Card";
 import VuiBox from 'components/VuiBox';
 import VuiTypography from 'components/VuiTypography';
+import Footer from 'examples/Footer';
 
 function Count() {
 
@@ -124,6 +125,7 @@ function Count() {
           <div className='column3'>
               <Godfather/>
           </div>
+          <Footer/>
       </DashboardLayout>
   )
 }

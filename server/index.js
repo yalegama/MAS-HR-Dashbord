@@ -161,7 +161,7 @@ app.get("/etodetailsmonthmonthandday/:month/:day",(req,res)=>{
 	const dataMonth=req.params.month;
 	const dataDay=req.params.day;
 
-	const etoDetailsMonthDay=`SELECT * FROM etoreport WHERE month=${dataMonth} and day=${dataDay}`;
+	const etoDetailsMonthDay=`SELECT * FROM etoreport WHERE month=${dataMonth} and day=${dataDay} and etopercentage!='#n/a' ORDER BY etopercentage DESC`;
 	//const etoDetailsDay=`SELECT * FROM etoreport WHERE day=? and id="2913"`;
 
 	connection.query(etoDetailsMonthDay,dataMonth,(err,result)=>{
@@ -273,7 +273,7 @@ app.get("/monthwiseeto",(req,res)=>{
 
 //team area wise all vop
 app.get("/teamareaallvop",(req,res)=>{
-	const teamareaallvop="SELECT teamarea, SUM(vop) AS 'vop' FROM etoreport GROUP BY teamarea;";
+	const teamareaallvop="SELECT teamarea, SUM(vop) AS 'vop' FROM etoreport GROUP BY teamarea";
 	connection.query(teamareaallvop,(err,result)=>{
 		res.send(result)
 	})
@@ -349,6 +349,56 @@ app.get("/godfatherareavopone",(req,res)=>{
 app.get("/lokuakkaareavopone",(req,res)=>{
 	const lokuakkaareavopone="SELECT lokuakka, SUM(vop) AS 'vop' FROM etoreport GROUP BY lokuakka";
 	connection.query(lokuakkaareavopone,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// //godfather wise all vop
+// app.get("/lokuakkaareavopone",(req,res)=>{
+// 	const lokuakkaareavopone="SELECT lokuakka, SUM(vop) AS 'vop' FROM etoreport GROUP BY lokuakka";
+// 	connection.query(lokuakkaareavopone,(err,result)=>{
+// 		res.send(result)
+// 	})
+
+// })
+
+
+
+// every each month resign total
+app.get("/monthlyresigntotal",(req,res)=>{
+	const monthlyresigntotal="SELECT month, SUM(resign) AS 'resign' FROM etoreport GROUP BY month";
+	connection.query(monthlyresigntotal,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+
+
+
+// every each month eto percentage
+app.get("/monthlyetopercentage",(req,res)=>{
+	const monthlyetopercentage="SELECT month, SUM(etopercentage) AS 'eto' FROM etoreport GROUP BY month;";
+	connection.query(monthlyetopercentage,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+const today = new Date();
+const day = today.getDate();        // 24
+const month = today.getMonth();     // 10 (Month is 0-based, so 10 means 11th Month)
+const year = today.getFullYear();
+
+var date = new Date(), y = date.getFullYear(), m = date.getMonth();
+
+const utcMonth = today.getUTCMonth();
+
+// current month area eto
+app.get("/currentmonthareaeto",(req,res)=>{
+	const currentmonthareaeto=`SELECT area, sum(etopercentage) AS 'eto' FROM etoreport WHERE month=${month+1} GROUP by (area)`;
+	connection.query(currentmonthareaeto,(err,result)=>{
 		res.send(result)
 	})
 

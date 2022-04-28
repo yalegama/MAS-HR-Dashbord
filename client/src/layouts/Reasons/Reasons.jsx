@@ -4,6 +4,7 @@ import DashboardNavbar from 'examples/Navbars/DashboardNavbar'
 import ReactApexChart from 'react-apexcharts';
 import "../Reasons/Reasons.css"
 import axios from 'axios';
+import Footer from 'examples/Footer';
 
 function Reasons() {
 
@@ -57,6 +58,7 @@ function Reasons() {
           <div className='rowOne'>
           <ReactApexChart options={options} series={series} type="pie" width={980} />
           </div>
+          <Footer/>
       </DashboardLayout>
   )
 }

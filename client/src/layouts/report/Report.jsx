@@ -11,6 +11,7 @@ import VuiTypography from 'components/VuiTypography';
 import Card from "@mui/material/Card";
 import ReactApexChart from 'react-apexcharts';
 import axios from 'axios';
+import Footer from 'examples/Footer';
 
 function Report() {
   //Select Month
@@ -226,13 +227,14 @@ const [area, setarea] = useState([]);
        </VuiBox>
        <VuiBox>
        <VuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-         <ReactApexChart options={options} series={series} type="bar" height={6000} />
+         <ReactApexChart options={options} series={series} type="bar" height={1200} />
          </VuiBox>
        </VuiBox>
      </Card>
        </div>
         </div>
       </div>
+      <Footer/>
     </DashboardLayout>
   )
 }

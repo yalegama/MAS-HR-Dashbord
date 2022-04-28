@@ -9,6 +9,7 @@ import ReactApexChart from 'react-apexcharts';
 import GlVop from './vop/component/GlVop';
 import GodFatherVop from './vop/component/GodFatherVop';
 import LokuakkaVop from './vop/component/LokuakkaVop';
+import Footer from 'examples/Footer';
 
 function Indetail() {
   const [data, setdata] = useState([]);
@@ -129,7 +130,7 @@ function Indetail() {
           <div>
             <LokuakkaVop/>
           </div>
-
+          <Footer/>
       </DashboardLayout>
   )
 }
