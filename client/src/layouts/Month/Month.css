@@ -1,0 +1,12 @@
+.one{
+    display: flex;
+}
+.oneBar{
+    display: flex;
+}
+.group{
+    margin: 15px;
+}
+.title{
+    color: aliceblue;
+}

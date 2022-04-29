@@ -404,6 +404,124 @@ app.get("/currentmonthareaeto",(req,res)=>{
 
 })
 
+// current month shift eto
+app.get("/currentmonthshifteto",(req,res)=>{
+	const currentmonthshifteto=`SELECT shift, sum(etopercentage) AS 'eto' FROM etoreport WHERE month=${month+1} GROUP by (shift)`;
+	connection.query(currentmonthshifteto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month vsl eto
+app.get("/currentmonthvsleto",(req,res)=>{
+	const currentmonthvsleto=`SELECT vsl, sum(etopercentage) AS 'eto' FROM etoreport WHERE month=${month+1} GROUP by (vsl)`;
+	connection.query(currentmonthvsleto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month er eto
+app.get("/currentmonthereto",(req,res)=>{
+	const currentmonthereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month=${month+1} GROUP by (er)`;
+	connection.query(currentmonthereto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month gl eto
+app.get("/currentmonthgleto",(req,res)=>{
+	const currentmonthgleto=`SELECT gl, sum(etopercentage) AS 'eto' FROM etoreport WHERE month=${month+1} GROUP by (gl)`;
+	connection.query(currentmonthgleto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month godfather eto
+app.get("/currentmonthgodfathereto",(req,res)=>{
+	const currentmonthgodfathereto=`SELECT godfather, sum(etopercentage) AS 'eto' FROM etoreport WHERE month=${month+1} GROUP by (godfather)`;
+	connection.query(currentmonthgodfathereto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month lokuakka eto
+app.get("/currentmonthlokuakkaeto",(req,res)=>{
+	const currentmonthlokuakkaeto=`SELECT lokuakka, sum(etopercentage) AS 'eto' FROM etoreport WHERE month=${month+1} GROUP by (lokuakka)`;
+	connection.query(currentmonthlokuakkaeto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month area vop
+app.get("/currentmonthareavop",(req,res)=>{
+	const currentmonthareavop=`SELECT area, sum(vop) AS 'vop' FROM etoreport WHERE month=${month+1} GROUP by (area)`;
+	connection.query(currentmonthareavop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+
+// current month shift vop
+app.get("/currentmonthshiftvop",(req,res)=>{
+	const currentmonthshiftvop=`SELECT shift, sum(vop) AS 'vop' FROM etoreport WHERE month=${month+1} GROUP by (shift)`;
+	connection.query(currentmonthshiftvop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month vsl vop
+app.get("/currentmonthvslvop",(req,res)=>{
+	const currentmonthvslvop=`SELECT vsl, sum(vop) AS 'vop' FROM etoreport WHERE month=${month+1} GROUP by (vsl)`;
+	connection.query(currentmonthvslvop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month er vop
+app.get("/currentmonthervop",(req,res)=>{
+	const currentmonthervop=`SELECT er, sum(vop) AS 'vop' FROM etoreport WHERE month=${month+1} GROUP by (er)`;
+	connection.query(currentmonthervop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month gl vop
+app.get("/currentmonthglvop",(req,res)=>{
+	const currentmonthglvop=`SELECT gl, sum(vop) AS 'vop' FROM etoreport WHERE month=${month+1} GROUP by (gl)`;
+	connection.query(currentmonthglvop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month godfather vop
+app.get("/currentmonthgodfathervop",(req,res)=>{
+	const currentmonthgodfathervop=`SELECT godfather, sum(vop) AS 'vop' FROM etoreport WHERE month=${month+1} GROUP by (godfather)`;
+	connection.query(currentmonthgodfathervop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current month lokuakka vop
+app.get("/currentmonthlokuakkavop",(req,res)=>{
+	const currentmonthlokuakkavop=`SELECT lokuakka, sum(vop) AS 'vop' FROM etoreport WHERE month=${month+1} GROUP by (lokuakka)`;
+	connection.query(currentmonthlokuakkavop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
 
 
 app.listen(PORT,(req,res)=>{
