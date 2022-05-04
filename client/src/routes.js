@@ -16,6 +16,7 @@ import Average from "layouts/average/Average";
 import Vop from "layouts/vop/Vop";
 import Indetail from "layouts/Indetail";
 import Month from "layouts/Month/Month";
+import Action from "layouts/action/Action";
 
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -23,6 +24,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { BsCreditCardFill } from "react-icons/bs";
 import { IoStatsChart } from "react-icons/io5";
 import { IoHome } from "react-icons/io5";
+
 
 const routes = [
   {
@@ -153,6 +155,15 @@ const routes = [
     route: "/Menu",
     icon: <BsCreditCardFill size="15px" color="inherit" />,
     component: Menu,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Action",
+    key: "Action",
+    route: "/Action",
+    icon: <BsCreditCardFill size="15px" color="inherit" />,
+    component: Action,
     noCollapse: true,
   },
   

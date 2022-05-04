@@ -1,30 +1,25 @@
 
+import "./dashboard.css"
 
-// @mui material components
 import Grid from "@mui/material/Grid";
 import { Card, LinearProgress, Stack } from "@mui/material";
 
-// Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 
-// Vision UI Dashboard React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
 import linearGradient from "assets/theme/functions/linearGradient";
 
-// Vision UI Dashboard React base styles
 import colors from "assets/theme/base/colors";
 
 
-// React icons
 import { IoGlobe } from "react-icons/io5";
 import { IoWallet } from "react-icons/io5";
 import { IoDocumentText } from "react-icons/io5";
 
-// Data
 import BarChart from "examples/Charts/BarCharts/BarChart";
 import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
 import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
@@ -122,20 +117,20 @@ function Dashboard() {
               </Card>
             </Grid>
           </Grid>
-          <div>
+          <div className="charts4">
             <VopBarChart/>
           </div>
           
 
-          <div>
+          <div className="charts1">
             <CarderBarChart/>
           </div>
 
-          <div>
+          <div className="charts2">
             <Resign/>
           </div>
        
-          <div>
+          <div className="charts3">
             <RadarCahrt/>
           </div>
 
