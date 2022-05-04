@@ -17,6 +17,8 @@ import Vop from "layouts/vop/Vop";
 import Indetail from "layouts/Indetail";
 import Month from "layouts/Month/Month";
 import Action from "layouts/action/Action";
+import Day from "layouts/day/Day";
+import Filter from "layouts/filter/Filter";
 
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -54,6 +56,15 @@ const routes = [
     route: "/Analysis",
     icon: <IoStatsChart size="15px" color="inherit" />,
     component: Analysis,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Day",
+    key: "Day",
+    route: "/Day",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Day,
     noCollapse: true,
   },
   {
@@ -136,6 +147,15 @@ const routes = [
     route: "/Indetail",
     icon: <IoStatsChart size="15px" color="inherit" />,
     component: Indetail,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Filter",
+    key: "Filter",
+    route: "/Filter",
+    icon: <IoStatsChart size="15px" color="inherit" />,
+    component: Filter,
     noCollapse: true,
   },
   {

@@ -76,7 +76,7 @@ function importCsvintoData2MySQL(filename){
 				if (error) {
 					console.error(error);
 				} else {
-					let query = 'INSERT INTO etoreasons (date,epf,firstname,lastname,team,resign,reason,service, age,grading,tl,area,shift,vsl,er,gl,godfather,lokuakka ) VALUES ?';
+					let query = 'INSERT INTO etoreasons (date,epf,firstname,lastname,team,resign,reason,service, age,grading,tl,area,shift,vsl,er,gl,godfather,lokuakka,day, month ) VALUES ?';
 					connection.query(query, [csvData], (error, response) => {
 						console.log(error || response);
 					});
@@ -593,6 +593,204 @@ app.get("/allheat",(req,res)=>{
 
 })
 
+// current day area eto
+app.get("/currentdayareaeto",(req,res)=>{
+	const currentdayareaeto=`SELECT area, sum(etopercentage) AS 'eto' FROM etoreport WHERE day=${day-3} GROUP by (area)`;
+	connection.query(currentdayareaeto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current day shift eto
+app.get("/currentdayshifteto",(req,res)=>{
+	const currentdayshifteto=`SELECT shift, sum(etopercentage) AS 'eto' FROM etoreport WHERE day=${day-3} GROUP by (shift)`;
+	connection.query(currentdayshifteto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//current day vsl eto
+app.get("/currentdayvslteto",(req,res)=>{
+	const currentdayvslteto=`SELECT vsl, sum(etopercentage) AS 'eto' FROM etoreport WHERE day=${day-3} GROUP by (vsl)`;
+	connection.query(currentdayvslteto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//current day ER eto
+app.get("/currentdayereto",(req,res)=>{
+	const currentdayereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE day=${day-3} GROUP by (er)`;
+	connection.query(currentdayereto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//current day gl eto
+app.get("/currentdaygleto",(req,res)=>{
+	const currentdaygleto=`SELECT gl, sum(etopercentage) AS 'eto' FROM etoreport WHERE day=${day-3} GROUP by (gl)`;
+	connection.query(currentdaygleto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//current day god father eto
+app.get("/currentdaygodfathereto",(req,res)=>{
+	const currentdaygodfathereto=`SELECT godfather, sum(etopercentage) AS 'eto' FROM etoreport WHERE day=${day-3} GROUP by (godfather)`;
+	connection.query(currentdaygodfathereto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+//current day Loku Akka eto
+app.get("/currentdaylokuakkaeto",(req,res)=>{
+	const currentdaylokuakkaeto=`SELECT lokuakka, sum(etopercentage) AS 'eto' FROM etoreport WHERE day=${day-3} GROUP by (lokuakka)`;
+	connection.query(currentdaylokuakkaeto,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+
+// current Day area vop
+app.get("/currentdayareavop",(req,res)=>{
+	const currentdayareavop=`SELECT area, sum(vop) AS 'vop' FROM etoreport WHERE day=${day-3} GROUP by (area)`;
+	connection.query(currentdayareavop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day shift vop
+app.get("/currentdayshiftvop",(req,res)=>{
+	const currentdayshiftvop=`SELECT shift, sum(vop) AS 'vop' FROM etoreport WHERE day=${day-3} GROUP by (shift)`;
+	connection.query(currentdayshiftvop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day vsl vop
+app.get("/currentdayvslvop",(req,res)=>{
+	const currentdayvslvop=`SELECT vsl, sum(vop) AS 'vop' FROM etoreport WHERE day=${day-3} GROUP by (vsl)`;
+	connection.query(currentdayvslvop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day ER vop
+app.get("/currentdayervop",(req,res)=>{
+	const currentdayervop=`SELECT er, sum(vop) AS 'vop' FROM etoreport WHERE day=${day-3} GROUP by (er)`;
+	connection.query(currentdayervop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day GL vop
+app.get("/currentdayglvop",(req,res)=>{
+	const currentdayglvop=`SELECT gl, sum(vop) AS 'vop' FROM etoreport WHERE day=${day-3} GROUP by (gl)`;
+	connection.query(currentdayglvop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day God Father vop
+app.get("/currentdaygodfathervop",(req,res)=>{
+	const currentdaygodfathervop=`SELECT godfather, sum(vop) AS 'vop' FROM etoreport WHERE day=${day-3} GROUP by (godfather)`;
+	connection.query(currentdaygodfathervop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day Loku Akka vop
+app.get("/currentdaylokuakkavop",(req,res)=>{
+	const currentdaylokuakkavop=`SELECT lokuakka, sum(vop) AS 'vop' FROM etoreport WHERE day=${day-3} GROUP by (lokuakka)`;
+	connection.query(currentdaylokuakkavop,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day area resign
+app.get("/currentdayarearesign",(req,res)=>{
+	const currentdayarearesign=`SELECT area, sum(resign) AS 'resign' FROM etoreport WHERE day=${day-3} GROUP by (area)`;
+	connection.query(currentdayarearesign,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day Shift resign
+app.get("/currentdayshiftesign",(req,res)=>{
+	const currentdayshiftesign=`SELECT shift, sum(resign) AS 'resign' FROM etoreport WHERE day=${day-3} GROUP by (shift)`;
+	connection.query(currentdayshiftesign,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day vsl resign
+app.get("/currentdayvslesign",(req,res)=>{
+	const currentdayvslesign=`SELECT vsl, sum(resign) AS 'resign' FROM etoreport WHERE day=${day-3} GROUP by (vsl)`;
+	connection.query(currentdayvslesign,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day ER resign
+app.get("/currentdayeresign",(req,res)=>{
+	const currentdayeresign=`SELECT er, sum(resign) AS 'resign' FROM etoreport WHERE day=${day-3} GROUP by (er)`;
+	connection.query(currentdayeresign,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day GL resign
+app.get("/currentdayglresign",(req,res)=>{
+	const currentdayglresign=`SELECT gl, sum(resign) AS 'resign' FROM etoreport WHERE day=${day-3} GROUP by (gl)`;
+	connection.query(currentdayglresign,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day godfather resign
+app.get("/currentdaygodfatherresign",(req,res)=>{
+	const currentdaygodfatherresign=`SELECT godfather, sum(resign) AS 'resign' FROM etoreport WHERE day=${day-3} GROUP by (godfather)`;
+	connection.query(currentdaygodfatherresign,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// current Day godfather resign
+app.get("/currentdaylokuakkaresign",(req,res)=>{
+	const currentdaylokuakkaresign=`SELECT lokuakka, sum(resign) AS 'resign' FROM etoreport WHERE day=${day-3} GROUP by (lokuakka)`;
+	connection.query(currentdaylokuakkaresign,(err,result)=>{
+		res.send(result)
+	})
+
+})
+
+// Current Month Reason Report 
+app.get("/thismonthreasonreport",(req,res)=>{
+	const thismonthreasonreport=`SELECT reason, COUNT(reason) AS 'reasoncount' FROM etoreasons  WHERE month=${month-3} GROUP BY reason;`
+	connection.query(thismonthreasonreport,(err,result)=>{
+		res.send(result)
+	})
+
+})
 
 
 

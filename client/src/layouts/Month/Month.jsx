@@ -23,6 +23,8 @@ import ErResignMonth from './components/resign/ErResignMonth'
 import GlResignMonth from './components/resign/GlResignMonth'
 import GorFatherResignMonth from './components/resign/GorFatherResignMonth'
 import LokuAkkaResignMonth from './components/resign/LokuAkkaResignMonth'
+import VuiTypography from 'components/VuiTypography'
+import BarChartMonth from './components/reason/BarChartMonth'
 
 function Month() {
   return (
@@ -84,6 +86,14 @@ function Month() {
       <div className='group'>
       <LokuAkkaResignMonth/>
       </div>
+      </div>
+      <div>
+        <VuiTypography variant="lg" color="white" fontWeight="bold">
+          <h3>This Month Reason Summary</h3>
+        </VuiTypography>
+        <div>
+          <BarChartMonth/>
+        </div>
       </div>
     </DashboardLayout>
   )

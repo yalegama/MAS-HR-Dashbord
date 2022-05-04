@@ -1,32 +1,34 @@
-
-import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 import Card from "@mui/material/Card";
+import React, { useEffect, useState } from 'react'
 import VuiBox from 'components/VuiBox';
 import VuiTypography from 'components/VuiTypography';
 import ReactApexChart from 'react-apexcharts';
-import axios from 'axios';
 
-function ErResignMonth() {
+function GodFatherDay() {
     const [data, setdata] = useState([]);
-    const [erDetails, seterDetails] = useState([]);
-    const [erCount, seterCount] = useState([]);
+    const [godfatherDetails, setgodfatherDetails] = useState([]);
+    const [godfatherCount, setgodfatherCount] = useState([]);
+
+
+
 
     const locadData=async ()=>{
-        const response=await axios.get("http://localhost:3001/currentmontherresign");
+        const response=await axios.get("http://localhost:3001/currentdaygodfathereto");
         setdata(response.data);
         for(const obj of response.data){
-            erDetails.push(obj.er);
-            erCount.push(obj.resign);
+            godfatherDetails.push(obj.godfather);
+            godfatherCount.push(obj.eto);
         }
     }
 
     useEffect(() => {
      locadData();
     }, [])
-    
+
     const series= [{
         name: 'ETO Total',
-        data: erCount
+        data: godfatherCount
       }]
      const options= {
         chart: {
@@ -54,7 +56,7 @@ function ErResignMonth() {
         },
         
         xaxis: {
-          categories: erDetails,
+          categories: godfatherDetails,
           position: 'top',
           axisBorder: {
             show: false
@@ -94,7 +96,7 @@ function ErResignMonth() {
         
         },
         title: {
-          text: 'Current Month Resign Of ER',
+          text: 'Current Day ETO Of GoFathers',
           floating: true,
           offsetY: 330,
           align: 'center',
@@ -103,13 +105,12 @@ function ErResignMonth() {
           }
         }
       }
-
   return (
     <div>
-                      <Card id="delete-account">
+                        <Card id="delete-account">
       <VuiBox>
       <VuiTypography variant="lg" color="white" fontWeight="bold">
-          Current Month ER ETO  
+         Current Month ETO God Father 
         </VuiTypography>
       </VuiBox>
       <VuiBox>
@@ -122,4 +123,4 @@ function ErResignMonth() {
   )
 }
 
-export default ErResignMonth
+export default GodFatherDay

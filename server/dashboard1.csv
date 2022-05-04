@@ -1,40 +1,79 @@
-Date,EPF,First Name,Last Name,Team,Resign/VOP,Reason,Service,Age,Grading,TL,Area,Shift,VSL,ER,GL,God Father,Loku Akka
-,14712,Anoma,Dilrukshi,SYM - 02 - B - SY,Resign,Pregnancy,2021-03-03,1993-02-01,,,Prasanna,B,Sanjeewa,Gayalee,Amela,Nuwan,Nayana
-,14810,Theresa,Mery,SYM - 05 - A - SY,VOP,Child Care,2021-03-29,1991-12-16,,,Prasanna,A,Miyuranga,Gayan,Tilani,Prasad,Lakshika
-,14794,Sandeepani,Premathilaka,SYM - 05 - B - SY,VOP,Pregnancy,2021-03-24,2001-07-08,,,Prasanna,B,Sanjeewa,Gayalee,Amela,Nuwan,Nadeesha
-,12895,Chathuri,Ranasinghe,SYM - 15 - A - SY,VOP,Work Pressure,2019-03-12,1994-09-02,,,#N/A,A,#N/A,#N/A,Anusha,#N/A,#N/A
-,15473,Nipuni,Silva,SYM - 15 - B - SY,VOP,Family Issue,2021-09-15,1998-11-02,,,#N/A,B,#N/A,#N/A,Amela,#N/A,#N/A
-,15122,Rajitha,Kanthi,Team - 03 - A - SY,VOP,Child Care,2021-06-21,1995-05-10,,,Prasanna,A,Naveen,Gayan,Shalitha,Ashoka,Selvam
-,14212,Sujeewa,Jayalath,Team - 03 - B - SY,VOP,Personal Issue,2020-09-25,1982-02-13,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Nilanthi
-,14551,James,Joshap,Team - 03 - B - SY,Resign,Module Issue,2021-01-18,1989-08-17,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Nilanthi
-,14798,Soloman,Jenita,Team - 05 - A - SY,VOP,Child Care,2021-03-25,1987-06-16,,,Prasanna,A,Naveen,Gayan,Sandun,Samantha,Saroji
-,15307,Manjaree,Balasooriya,Team - 05 - B - SY,Resign,Work Pressure,2021-08-02,2000-12-26,,,Prasanna,B,Kasun,Gayalee,Geethanjalee,Bandara,Ishara
-,11587,Dedunu,Aththanayaka,Team - 06 - B - SY,VOP,Relocated,2018-03-12,1995-03-05,,,Prasanna,B,Kasun,Gayalee,Geethanjalee,Bandara,Sanjeewami
-,15386,Jensi,Jensi,Team - 06 - B - SY,VOP,Child Care,2021-08-16,1987-09-23,,,Prasanna,B,Kasun,Gayalee,Geethanjalee,Bandara,Sanjeewami
-,12178,Vijayadarshika,Vijayadarshika,Team - 07 - A - SY,VOP,Child Care,2018-08-20,1991-05-08,,,Prasanna,A,Naveen,Gayan,Shalitha,Krishantha,Maheshika
-,13009,Roshini,Madushani,Team - 07 - A - SY,VOP,Pregnancy,2019-05-15,1991-05-15,,,Prasanna,A,Naveen,Gayan,Shalitha,Krishantha,Maheshika
-,11085,Wasanthi,Kumarasingha,Team - 07 - B - SY,VOP,Other Job,2017-09-01,1982-01-14,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Inoka
-,13516,Bathmanadan,Priyanka,Team - 07 - B - SY,VOP,Relocated,2019-09-16,2001-03-28,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Inoka
-,15584,Mohomamd,Iman,Team - 11 - A - SY,Resign,Higher Education,2021-10-01,2002-04-21,,,#N/A,A,#N/A,#N/A,Lakshmi,#N/A,#N/A
-,15600,Nuwanthi,Ariyathilaka,Team - 11 - B - SY,VOP,Work Pressure,2021-10-04,1986-01-05,,,Prasanna,B,Sanjeewa,Gayalee,Nimali,Isuri,Dayani
-,15610,Chanaka,Dulanjaya,Team - 11 - B - SY,VOP,Forign Job,2021-10-04,1987-05-16,,,Prasanna,B,Sanjeewa,Gayalee,Nimali,Isuri,Dayani
-,15787,Amila,Ranjih,Team - 12 - B - SY,VOP,Other Job,2021-11-03,1992-08-09,,,Prasanna,B,Sanjeewa,Gayalee,Nimali,Isuri,Vacant
-,15510,Vineetha,Ranasingha,Team - 13 - B - SY,Resign,Forign Job,2021-09-21,1994-03-19,,,Chanuka,B,Pradeep,Amry,Lahiru,Devni,Chamali
-,15611,Chandradasan,Rasimila,Team - 13 - B - SY,Resign,Child Care,2021-10-04,1995-07-26,,,Chanuka,B,Pradeep,Amry,Lahiru,Devni,Chamali
-,4832,Renuka,Malkanthi,Team - 14 - A - SY,Resign,Sickness,2010-11-18,1969-01-21,,,Chanuka,A,Saman,Ayoma,Daham,Chathurika,Ruwangika
-,15910,Ilayaraj,Ilayaraj,Team - 15 - B - SY,VOP,Personal Issue,2021-11-24,1998-03-20,,,Chanuka,B,Pradeep,Amry,Lahiru,Devni,Sakunthala
-,13029,Sandaruwani,Dissanayake,Team - 16 - B - SY,Resign,Family Issue,2019-05-06,1999-01-15,,,Chanuka,B,Pradeep,Amry,Sandamali,Buddhika,Iresha
-,14787,Thilagawathi,Manogaran,Team - 19 - A - SY,Resign,Child Care,2021-03-22,1999-05-10,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Tharuka
-,15532,Sumanalatha,Menike,Team - 21 - A - SY,Resign,Module Issue,2021-09-22,1975-08-21,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Sathya
-,15552,Sakunthala,Thilakarathna,Team - 21 - A - SY,Resign,Sickness,2021-09-27,1985-09-22,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Sathya
-,15572,Rajarathnam,Ranjani,Team - 21 - A - SY,Resign,Child Care,2021-09-27,1987-01-02,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Sathya
-,14961,Thushari,Gamage,Team - 24 - A - SY,VOP,Family Issue,2021-04-28,1985-03-03,,,Chanuka,A,Saman,Ayoma,Manoja,Pradeepika,Sithari
-,16013,Nishad,Madhushanka,Team - 25 - A - SY,VOP,Higher Education,2021-12-15,2003-09-02,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Vacant
-,15213,Arul,Sami,Team - 25 - B - SY,VOP,Forign Job,2021-07-12,2001-06-21,,,Chanuka,B,Pradeep,Amry,Lakshitha,Lakshika,Radheeka
-,15254,Sureka,Lakmali,Team - 25 - B - SY,VOP,Forign Job,2021-07-19,1991-10-21,,,Chanuka,B,Pradeep,Amry,Lakshitha,Lakshika,Radheeka
-,14879,Prasangika,Udumulla,Team - 26 - B - SY,VOP,Work Pressure,2021-04-20,1995-10-25,,,Chanuka,B,Pradeep,Amry,Nuwan,Chathura,Kanthi
-,15419,Siththi,Dulpa,Team - 27 - B - SY,VOP,Family Member Illness,2021-09-01,1975-05-28,,,Chanuka,B,Pradeep,Amry,Nuwan,Chathura,Dulanjali
-,13141,Nirma,Dharmasena,Team - 29 - A - SY,VOP,Sickness,2019-05-27,1986-10-12,,,Chanuka,A,Saman,Ayoma,Dilini,Nisha,Sandya
-,15848,Anoma,Rathnaseeli,Team - 29 - B - SY,Resign,Personal Issue,2021-11-15,1977-11-24,,,Chanuka,B,Pradeep,Amry,Iresha,Ayesh,Nadeesha
-,10875,Umesha,Premasiri,Team - 30 - A - SY,Resign,Forign Job,2017-06-26,1992-11-16,,,Chanuka,A,Saman,Ayoma,Dilini,Nisha,Harshani
-,15936,Gouthamanie,Gouthamanie,Team - 31 - B - SY,Resign,Forign Job,2021-12-01,2000-10-25,,,Chanuka,B,Pradeep,Amry,Iresha,Ayesh,Nadee
+Date,EPF,First Name,Last Name,Team,Resign/VOP,Reason,Service,Age,Grading,TL,Area,Shift,VSL,ER,GL,God Father,Loku Akka,Day,Month
+,14712,Anoma,Dilrukshi,SYM - 02 - B - SY,Resign,Pregnancy,2021-03-03,1993-02-01,,,Prasanna,B,Sanjeewa,Gayalee,Amela,Nuwan,Nayana,1,1
+,14810,Theresa,Mery,SYM - 05 - A - SY,VOP,Child Care,2021-03-29,1991-12-16,,,Prasanna,A,Miyuranga,Gayan,Tilani,Prasad,Lakshika,1,1
+,14794,Sandeepani,Premathilaka,SYM - 05 - B - SY,VOP,Pregnancy,2021-03-24,2001-07-08,,,Prasanna,B,Sanjeewa,Gayalee,Amela,Nuwan,Nadeesha,1,1
+,12895,Chathuri,Ranasinghe,SYM - 15 - A - SY,VOP,Work Pressure,2019-03-12,1994-09-02,,,#N/A,A,#N/A,#N/A,Anusha,#N/A,#N/A,1,1
+,15473,Nipuni,Silva,SYM - 15 - B - SY,VOP,Family Issue,2021-09-15,1998-11-02,,,#N/A,B,#N/A,#N/A,Amela,#N/A,#N/A,1,1
+,15122,Rajitha,Kanthi,Team - 03 - A - SY,VOP,Child Care,2021-06-21,1995-05-10,,,Prasanna,A,Naveen,Gayan,Shalitha,Ashoka,Selvam,1,2
+,14212,Sujeewa,Jayalath,Team - 03 - B - SY,VOP,Personal Issue,2020-09-25,1982-02-13,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Nilanthi,1,2
+,14551,James,Joshap,Team - 03 - B - SY,Resign,Module Issue,2021-01-18,1989-08-17,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Nilanthi,1,2
+,14798,Soloman,Jenita,Team - 05 - A - SY,VOP,Child Care,2021-03-25,1987-06-16,,,Prasanna,A,Naveen,Gayan,Sandun,Samantha,Saroji,1,2
+,15307,Manjaree,Balasooriya,Team - 05 - B - SY,Resign,Work Pressure,2021-08-02,2000-12-26,,,Prasanna,B,Kasun,Gayalee,Geethanjalee,Bandara,Ishara,1,2
+,11587,Dedunu,Aththanayaka,Team - 06 - B - SY,VOP,Relocated,2018-03-12,1995-03-05,,,Prasanna,B,Kasun,Gayalee,Geethanjalee,Bandara,Sanjeewami,1,3
+,15386,Jensi,Jensi,Team - 06 - B - SY,VOP,Child Care,2021-08-16,1987-09-23,,,Prasanna,B,Kasun,Gayalee,Geethanjalee,Bandara,Sanjeewami,1,3
+,12178,Vijayadarshika,Vijayadarshika,Team - 07 - A - SY,VOP,Child Care,2018-08-20,1991-05-08,,,Prasanna,A,Naveen,Gayan,Shalitha,Krishantha,Maheshika,1,3
+,13009,Roshini,Madushani,Team - 07 - A - SY,VOP,Pregnancy,2019-05-15,1991-05-15,,,Prasanna,A,Naveen,Gayan,Shalitha,Krishantha,Maheshika,1,3
+,11085,Wasanthi,Kumarasingha,Team - 07 - B - SY,VOP,Other Job,2017-09-01,1982-01-14,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Inoka,1,3
+,13516,Bathmanadan,Priyanka,Team - 07 - B - SY,VOP,Relocated,2019-09-16,2001-03-28,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Inoka,1,3
+,15584,Mohomamd,Iman,Team - 11 - A - SY,Resign,Higher Education,2021-10-01,2002-04-21,,,#N/A,A,#N/A,#N/A,Lakshmi,#N/A,#N/A,1,3
+,15600,Nuwanthi,Ariyathilaka,Team - 11 - B - SY,VOP,Work Pressure,2021-10-04,1986-01-05,,,Prasanna,B,Sanjeewa,Gayalee,Nimali,Isuri,Dayani,2,3
+,15610,Chanaka,Dulanjaya,Team - 11 - B - SY,VOP,Forign Job,2021-10-04,1987-05-16,,,Prasanna,B,Sanjeewa,Gayalee,Nimali,Isuri,Dayani,2,3
+,15787,Amila,Ranjih,Team - 12 - B - SY,VOP,Other Job,2021-11-03,1992-08-09,,,Prasanna,B,Sanjeewa,Gayalee,Nimali,Isuri,Vacant,2,3
+,15510,Vineetha,Ranasingha,Team - 13 - B - SY,Resign,Forign Job,2021-09-21,1994-03-19,,,Chanuka,B,Pradeep,Amry,Lahiru,Devni,Chamali,2,3
+,15611,Chandradasan,Rasimila,Team - 13 - B - SY,Resign,Child Care,2021-10-04,1995-07-26,,,Chanuka,B,Pradeep,Amry,Lahiru,Devni,Chamali,2,3
+,4832,Renuka,Malkanthi,Team - 14 - A - SY,Resign,Sickness,2010-11-18,1969-01-21,,,Chanuka,A,Saman,Ayoma,Daham,Chathurika,Ruwangika,2,4
+,15910,Ilayaraj,Ilayaraj,Team - 15 - B - SY,VOP,Personal Issue,2021-11-24,1998-03-20,,,Chanuka,B,Pradeep,Amry,Lahiru,Devni,Sakunthala,2,4
+,13029,Sandaruwani,Dissanayake,Team - 16 - B - SY,Resign,Family Issue,2019-05-06,1999-01-15,,,Chanuka,B,Pradeep,Amry,Sandamali,Buddhika,Iresha,2,4
+,14787,Thilagawathi,Manogaran,Team - 19 - A - SY,Resign,Child Care,2021-03-22,1999-05-10,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Tharuka,3,4
+,15532,Sumanalatha,Menike,Team - 21 - A - SY,Resign,Module Issue,2021-09-22,1975-08-21,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Sathya,3,4
+,15552,Sakunthala,Thilakarathna,Team - 21 - A - SY,Resign,Sickness,2021-09-27,1985-09-22,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Sathya,3,4
+,15572,Rajarathnam,Ranjani,Team - 21 - A - SY,Resign,Child Care,2021-09-27,1987-01-02,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Sathya,3,4
+,14961,Thushari,Gamage,Team - 24 - A - SY,VOP,Family Issue,2021-04-28,1985-03-03,,,Chanuka,A,Saman,Ayoma,Manoja,Pradeepika,Sithari,3,4
+,16013,Nishad,Madhushanka,Team - 25 - A - SY,VOP,Higher Education,2021-12-15,2003-09-02,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Vacant,3,4
+,15213,Arul,Sami,Team - 25 - B - SY,VOP,Forign Job,2021-07-12,2001-06-21,,,Chanuka,B,Pradeep,Amry,Lakshitha,Lakshika,Radheeka,3,5
+,15254,Sureka,Lakmali,Team - 25 - B - SY,VOP,Forign Job,2021-07-19,1991-10-21,,,Chanuka,B,Pradeep,Amry,Lakshitha,Lakshika,Radheeka,4,5
+,14879,Prasangika,Udumulla,Team - 26 - B - SY,VOP,Work Pressure,2021-04-20,1995-10-25,,,Chanuka,B,Pradeep,Amry,Nuwan,Chathura,Kanthi,4,5
+,15419,Siththi,Dulpa,Team - 27 - B - SY,VOP,Family Member Illness,2021-09-01,1975-05-28,,,Chanuka,B,Pradeep,Amry,Nuwan,Chathura,Dulanjali,4,5
+,13141,Nirma,Dharmasena,Team - 29 - A - SY,VOP,Sickness,2019-05-27,1986-10-12,,,Chanuka,A,Saman,Ayoma,Dilini,Nisha,Sandya,4,5
+,15848,Anoma,Rathnaseeli,Team - 29 - B - SY,Resign,Personal Issue,2021-11-15,1977-11-24,,,Chanuka,B,Pradeep,Amry,Iresha,Ayesh,Nadeesha,4,5
+,10875,Umesha,Premasiri,Team - 30 - A - SY,Resign,Forign Job,2017-06-26,1992-11-16,,,Chanuka,A,Saman,Ayoma,Dilini,Nisha,Harshani,4,5
+,15936,Gouthamanie,Gouthamanie,Team - 31 - B - SY,Resign,Forign Job,2021-12-01,2000-10-25,,,Chanuka,B,Pradeep,Amry,Iresha,Ayesh,Nadee,4,5
+,14712,Anoma,Dilrukshi,SYM - 02 - B - SY,Resign,Pregnancy,2021-03-03,1993-02-01,,,Prasanna,B,Sanjeewa,Gayalee,Amela,Nuwan,Nayana,1,1
+,14810,Theresa,Mery,SYM - 05 - A - SY,VOP,Child Care,2021-03-29,1991-12-16,,,Prasanna,A,Miyuranga,Gayan,Tilani,Prasad,Lakshika,1,1
+,14794,Sandeepani,Premathilaka,SYM - 05 - B - SY,VOP,Pregnancy,2021-03-24,2001-07-08,,,Prasanna,B,Sanjeewa,Gayalee,Amela,Nuwan,Nadeesha,1,1
+,12895,Chathuri,Ranasinghe,SYM - 15 - A - SY,VOP,Work Pressure,2019-03-12,1994-09-02,,,#N/A,A,#N/A,#N/A,Anusha,#N/A,#N/A,1,1
+,15473,Nipuni,Silva,SYM - 15 - B - SY,VOP,Family Issue,2021-09-15,1998-11-02,,,#N/A,B,#N/A,#N/A,Amela,#N/A,#N/A,1,1
+,15122,Rajitha,Kanthi,Team - 03 - A - SY,VOP,Child Care,2021-06-21,1995-05-10,,,Prasanna,A,Naveen,Gayan,Shalitha,Ashoka,Selvam,1,1
+,14212,Sujeewa,Jayalath,Team - 03 - B - SY,VOP,Personal Issue,2020-09-25,1982-02-13,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Nilanthi,1,1
+,14551,James,Joshap,Team - 03 - B - SY,Resign,Module Issue,2021-01-18,1989-08-17,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Nilanthi,1,1
+,14798,Soloman,Jenita,Team - 05 - A - SY,VOP,Child Care,2021-03-25,1987-06-16,,,Prasanna,A,Naveen,Gayan,Sandun,Samantha,Saroji,1,1
+,15307,Manjaree,Balasooriya,Team - 05 - B - SY,Resign,Work Pressure,2021-08-02,2000-12-26,,,Prasanna,B,Kasun,Gayalee,Geethanjalee,Bandara,Ishara,1,1
+,11587,Dedunu,Aththanayaka,Team - 06 - B - SY,VOP,Relocated,2018-03-12,1995-03-05,,,Prasanna,B,Kasun,Gayalee,Geethanjalee,Bandara,Sanjeewami,1,1
+,15386,Jensi,Jensi,Team - 06 - B - SY,VOP,Child Care,2021-08-16,1987-09-23,,,Prasanna,B,Kasun,Gayalee,Geethanjalee,Bandara,Sanjeewami,1,1
+,12178,Vijayadarshika,Vijayadarshika,Team - 07 - A - SY,VOP,Child Care,2018-08-20,1991-05-08,,,Prasanna,A,Naveen,Gayan,Shalitha,Krishantha,Maheshika,1,1
+,13009,Roshini,Madushani,Team - 07 - A - SY,VOP,Pregnancy,2019-05-15,1991-05-15,,,Prasanna,A,Naveen,Gayan,Shalitha,Krishantha,Maheshika,1,1
+,11085,Wasanthi,Kumarasingha,Team - 07 - B - SY,VOP,Other Job,2017-09-01,1982-01-14,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Inoka,1,1
+,13516,Bathmanadan,Priyanka,Team - 07 - B - SY,VOP,Relocated,2019-09-16,2001-03-28,,,Prasanna,B,Kasun,Gayalee,Sameera,Dinesha,Inoka,1,1
+,15584,Mohomamd,Iman,Team - 11 - A - SY,Resign,Higher Education,2021-10-01,2002-04-21,,,#N/A,A,#N/A,#N/A,Lakshmi,#N/A,#N/A,1,1
+,15600,Nuwanthi,Ariyathilaka,Team - 11 - B - SY,VOP,Work Pressure,2021-10-04,1986-01-05,,,Prasanna,B,Sanjeewa,Gayalee,Nimali,Isuri,Dayani,2,1
+,15610,Chanaka,Dulanjaya,Team - 11 - B - SY,VOP,Forign Job,2021-10-04,1987-05-16,,,Prasanna,B,Sanjeewa,Gayalee,Nimali,Isuri,Dayani,2,1
+,15787,Amila,Ranjih,Team - 12 - B - SY,VOP,Other Job,2021-11-03,1992-08-09,,,Prasanna,B,Sanjeewa,Gayalee,Nimali,Isuri,Vacant,2,1
+,15510,Vineetha,Ranasingha,Team - 13 - B - SY,Resign,Forign Job,2021-09-21,1994-03-19,,,Chanuka,B,Pradeep,Amry,Lahiru,Devni,Chamali,2,1
+,15611,Chandradasan,Rasimila,Team - 13 - B - SY,Resign,Child Care,2021-10-04,1995-07-26,,,Chanuka,B,Pradeep,Amry,Lahiru,Devni,Chamali,2,1
+,4832,Renuka,Malkanthi,Team - 14 - A - SY,Resign,Sickness,2010-11-18,1969-01-21,,,Chanuka,A,Saman,Ayoma,Daham,Chathurika,Ruwangika,2,1
+,15910,Ilayaraj,Ilayaraj,Team - 15 - B - SY,VOP,Personal Issue,2021-11-24,1998-03-20,,,Chanuka,B,Pradeep,Amry,Lahiru,Devni,Sakunthala,2,1
+,13029,Sandaruwani,Dissanayake,Team - 16 - B - SY,Resign,Family Issue,2019-05-06,1999-01-15,,,Chanuka,B,Pradeep,Amry,Sandamali,Buddhika,Iresha,2,1
+,14787,Thilagawathi,Manogaran,Team - 19 - A - SY,Resign,Child Care,2021-03-22,1999-05-10,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Tharuka,3,1
+,15532,Sumanalatha,Menike,Team - 21 - A - SY,Resign,Module Issue,2021-09-22,1975-08-21,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Sathya,3,1
+,15552,Sakunthala,Thilakarathna,Team - 21 - A - SY,Resign,Sickness,2021-09-27,1985-09-22,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Sathya,3,1
+,15572,Rajarathnam,Ranjani,Team - 21 - A - SY,Resign,Child Care,2021-09-27,1987-01-02,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Sathya,3,1
+,14961,Thushari,Gamage,Team - 24 - A - SY,VOP,Family Issue,2021-04-28,1985-03-03,,,Chanuka,A,Saman,Ayoma,Manoja,Pradeepika,Sithari,3,1
+,16013,Nishad,Madhushanka,Team - 25 - A - SY,VOP,Higher Education,2021-12-15,2003-09-02,,,Chanuka,A,Saman,Ayoma,Chandana,Krishan,Vacant,3,1
+,15213,Arul,Sami,Team - 25 - B - SY,VOP,Forign Job,2021-07-12,2001-06-21,,,Chanuka,B,Pradeep,Amry,Lakshitha,Lakshika,Radheeka,3,1
+,15254,Sureka,Lakmali,Team - 25 - B - SY,VOP,Forign Job,2021-07-19,1991-10-21,,,Chanuka,B,Pradeep,Amry,Lakshitha,Lakshika,Radheeka,4,1
+,14879,Prasangika,Udumulla,Team - 26 - B - SY,VOP,Work Pressure,2021-04-20,1995-10-25,,,Chanuka,B,Pradeep,Amry,Nuwan,Chathura,Kanthi,4,1
+,15419,Siththi,Dulpa,Team - 27 - B - SY,VOP,Family Member Illness,2021-09-01,1975-05-28,,,Chanuka,B,Pradeep,Amry,Nuwan,Chathura,Dulanjali,4,1
+,13141,Nirma,Dharmasena,Team - 29 - A - SY,VOP,Sickness,2019-05-27,1986-10-12,,,Chanuka,A,Saman,Ayoma,Dilini,Nisha,Sandya,4,1
+,15848,Anoma,Rathnaseeli,Team - 29 - B - SY,Resign,Personal Issue,2021-11-15,1977-11-24,,,Chanuka,B,Pradeep,Amry,Iresha,Ayesh,Nadeesha,4,1
+,10875,Umesha,Premasiri,Team - 30 - A - SY,Resign,Forign Job,2017-06-26,1992-11-16,,,Chanuka,A,Saman,Ayoma,Dilini,Nisha,Harshani,4,1
+,15936,Gouthamanie,Gouthamanie,Team - 31 - B - SY,Resign,Forign Job,2021-12-01,2000-10-25,,,Chanuka,B,Pradeep,Amry,Iresha,Ayesh,Nadee,4,1

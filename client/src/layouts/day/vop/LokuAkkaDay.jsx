@@ -1,22 +1,21 @@
-
 import React, { useEffect, useState } from 'react'
 import Card from "@mui/material/Card";
+import axios from 'axios';
 import VuiBox from 'components/VuiBox';
 import VuiTypography from 'components/VuiTypography';
 import ReactApexChart from 'react-apexcharts';
-import axios from 'axios';
 
-function ErResignMonth() {
+function LokuAkkaDay() {
     const [data, setdata] = useState([]);
-    const [erDetails, seterDetails] = useState([]);
-    const [erCount, seterCount] = useState([]);
+    const [lokuakkaDetails, setlokuakkaDetails] = useState([]);
+    const [lokuakkaCount, setlokuakkaCount] = useState([]);
 
     const locadData=async ()=>{
-        const response=await axios.get("http://localhost:3001/currentmontherresign");
+        const response=await axios.get("http://localhost:3001/currentdaylokuakkavop");
         setdata(response.data);
         for(const obj of response.data){
-            erDetails.push(obj.er);
-            erCount.push(obj.resign);
+            lokuakkaDetails.push(obj.lokuakka);
+            lokuakkaCount.push(obj.vop);
         }
     }
 
@@ -24,9 +23,13 @@ function ErResignMonth() {
      locadData();
     }, [])
     
-    const series= [{
-        name: 'ETO Total',
-        data: erCount
+
+
+
+
+   const series= [{
+        name: 'VOP Total',
+        data: lokuakkaCount
       }]
      const options= {
         chart: {
@@ -54,7 +57,7 @@ function ErResignMonth() {
         },
         
         xaxis: {
-          categories: erDetails,
+          categories: lokuakkaDetails,
           position: 'top',
           axisBorder: {
             show: false
@@ -94,7 +97,7 @@ function ErResignMonth() {
         
         },
         title: {
-          text: 'Current Month Resign Of ER',
+          text: ' VOP Of Loku Akka',
           floating: true,
           offsetY: 330,
           align: 'center',
@@ -103,13 +106,12 @@ function ErResignMonth() {
           }
         }
       }
-
   return (
     <div>
-                      <Card id="delete-account">
+                                <Card id="delete-account">
       <VuiBox>
       <VuiTypography variant="lg" color="white" fontWeight="bold">
-          Current Month ER ETO  
+          Current Month VOP Loku Akka
         </VuiTypography>
       </VuiBox>
       <VuiBox>
@@ -122,4 +124,4 @@ function ErResignMonth() {
   )
 }
 
-export default ErResignMonth
+export default LokuAkkaDay

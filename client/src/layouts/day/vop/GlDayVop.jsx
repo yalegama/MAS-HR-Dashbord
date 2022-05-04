@@ -1,22 +1,22 @@
-
 import React, { useEffect, useState } from 'react'
 import Card from "@mui/material/Card";
+import axios from 'axios';
 import VuiBox from 'components/VuiBox';
 import VuiTypography from 'components/VuiTypography';
 import ReactApexChart from 'react-apexcharts';
-import axios from 'axios';
 
-function ErResignMonth() {
+function GlDayVop() {
     const [data, setdata] = useState([]);
-    const [erDetails, seterDetails] = useState([]);
-    const [erCount, seterCount] = useState([]);
+    const [glDetails, setglDetails] = useState([]);
+    const [glCount, setglCount] = useState([]);
+
 
     const locadData=async ()=>{
-        const response=await axios.get("http://localhost:3001/currentmontherresign");
+        const response=await axios.get("http://localhost:3001/currentdayglvop");
         setdata(response.data);
         for(const obj of response.data){
-            erDetails.push(obj.er);
-            erCount.push(obj.resign);
+            glDetails.push(obj.gl);
+            glCount.push(obj.vop);
         }
     }
 
@@ -24,9 +24,13 @@ function ErResignMonth() {
      locadData();
     }, [])
     
+
+
+
+
     const series= [{
-        name: 'ETO Total',
-        data: erCount
+        name: 'VOP Total',
+        data: glCount
       }]
      const options= {
         chart: {
@@ -54,7 +58,7 @@ function ErResignMonth() {
         },
         
         xaxis: {
-          categories: erDetails,
+          categories: glDetails,
           position: 'top',
           axisBorder: {
             show: false
@@ -94,7 +98,7 @@ function ErResignMonth() {
         
         },
         title: {
-          text: 'Current Month Resign Of ER',
+          text: 'Today VOP Of GL',
           floating: true,
           offsetY: 330,
           align: 'center',
@@ -103,13 +107,12 @@ function ErResignMonth() {
           }
         }
       }
-
   return (
     <div>
-                      <Card id="delete-account">
+                     <Card id="delete-account">
       <VuiBox>
       <VuiTypography variant="lg" color="white" fontWeight="bold">
-          Current Month ER ETO  
+          Current Day VOP GL
         </VuiTypography>
       </VuiBox>
       <VuiBox>
@@ -122,4 +125,4 @@ function ErResignMonth() {
   )
 }
 
-export default ErResignMonth
+export default GlDayVop
