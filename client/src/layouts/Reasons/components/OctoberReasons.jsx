@@ -2,15 +2,14 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import ReactApexChart from 'react-apexcharts';
 
-function MarchReasons() {
+function OctoberReasons() {
     const [data, setdata] = useState([]);
     const [areaDetails, setareaDetails] = useState([]);
     const [areaCount, setareaCount] = useState([]);
   
-
   
     const locadData=async ()=>{
-        const response=await axios.get("http://localhost:3001/marchreason");
+        const response=await axios.get("http://localhost:3001/octoberreason");
         setdata(response.data);
         for(const obj of response.data){
           areaDetails.push(obj.reason);
@@ -48,7 +47,7 @@ function MarchReasons() {
           }
         },
         title: {
-          text: "March"
+          text: "October"
         },
         dataLabels: {
           formatter(val, opts) {
@@ -62,9 +61,9 @@ function MarchReasons() {
       }
   return (
     <div>
-        <ReactApexChart options={options} series={series} type="pie" width={380}/>
+         <ReactApexChart options={options} series={series} type="pie" width={380}/>
     </div>
   )
 }
 
-export default MarchReasons
+export default OctoberReasons

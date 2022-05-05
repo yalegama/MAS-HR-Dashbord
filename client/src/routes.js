@@ -19,6 +19,7 @@ import Month from "layouts/Month/Month";
 import Action from "layouts/action/Action";
 import Day from "layouts/day/Day";
 import Filter from "layouts/filter/Filter";
+import Er from "layouts/er/Er";
 
 import { IoRocketSharp } from "react-icons/io5";
 import { IoIosDocument } from "react-icons/io";
@@ -151,11 +152,11 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Filter",
-    key: "Filter",
-    route: "/Filter",
+    name: "ER",
+    key: "ER",
+    route: "/Er",
     icon: <IoStatsChart size="15px" color="inherit" />,
-    component: Filter,
+    component: Er,
     noCollapse: true,
   },
   {

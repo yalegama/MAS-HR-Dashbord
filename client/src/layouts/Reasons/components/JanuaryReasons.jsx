@@ -48,7 +48,7 @@ function JanuaryReasons() {
           }
         },
         title: {
-          text: "Current Month Area ETO %"
+          text: "January"
         },
         dataLabels: {
           formatter(val, opts) {

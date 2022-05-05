@@ -10,6 +10,13 @@ import FebruaryReasons from './components/FebruaryReasons';
 import MarchReasons from './components/MarchReasons';
 import AprilReasons from './components/AprilReasons';
 import MayReasons from './components/MayReasons';
+import JuneReasons from './components/JuneReasons';
+import JulyReasons from './components/JulyReasons';
+import AugustReasons from './components/AugustReasons';
+import SeptemberReasons from './components/SeptemberReasons';
+import OctoberReasons from './components/OctoberReasons';
+import NovemberReasons from './components/NovemberReasons';
+import DecemberReasons from './components/DecemberReasons';
 
 function Reasons() {
 
@@ -71,6 +78,15 @@ function Reasons() {
           </div>
           <div className='barChart'>
             <MayReasons/>
+            <JuneReasons/>
+            <JulyReasons/>
+            <AugustReasons/>
+          </div>
+          <div className='barChart'>
+            <SeptemberReasons/>
+            <OctoberReasons/>
+            <NovemberReasons/>
+            <DecemberReasons/>
           </div>
           <Footer/>
       </DashboardLayout>

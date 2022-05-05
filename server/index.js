@@ -881,6 +881,80 @@ app.get("/decemberreason",(req,res)=>{
 	})
 })
 
+//-----Each month er eto--------
+
+//january er eto 
+app.get("/januaryereto",(req,res)=>{
+	const januaryereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='1' GROUP by (er);`
+	connection.query(januaryereto,(err,result)=>{
+		res.send(result)
+	})
+})
+
+// february er eto
+app.get("/februaryereto",(req,res)=>{
+	const februaryereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='2' GROUP by (er);`
+	connection.query(februaryereto,(err,result)=>{
+		res.send(result)
+	})
+})
+// march er eto
+app.get("/marchereto",(req,res)=>{
+	const marchereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='3' GROUP by (er);`
+	connection.query(marchereto,(err,result)=>{
+		res.send(result)
+	})
+})
+// april er eto
+app.get("/aprilereto",(req,res)=>{
+	const aprilereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='4' GROUP by (er);`
+	connection.query(aprilereto,(err,result)=>{
+		res.send(result)
+	})
+})
+// may er eto
+app.get("/mayereto",(req,res)=>{
+	const mayereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='5' GROUP by (er);`
+	connection.query(mayereto,(err,result)=>{
+		res.send(result)
+	})
+})
+// june er eto
+app.get("/juneereto",(req,res)=>{
+	const juneereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='6' GROUP by (er);`
+	connection.query(juneereto,(err,result)=>{
+		res.send(result)
+	})
+})
+// july er eto
+app.get("/julyereto",(req,res)=>{
+	const julyereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='7' GROUP by (er);`
+	connection.query(julyereto,(err,result)=>{
+		res.send(result)
+	})
+})
+// august er eto
+app.get("/augustereto",(req,res)=>{
+	const augustereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='8' GROUP by (er);`
+	connection.query(augustereto,(err,result)=>{
+		res.send(result)
+	})
+})
+// september er eto
+app.get("/septemberereto",(req,res)=>{
+	const septemberereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='9' GROUP by (er);`
+	connection.query(septemberereto,(err,result)=>{
+		res.send(result)
+	})
+})
+// february er eto
+app.get("/octoberereto",(req,res)=>{
+	const octoberereto=`SELECT er, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='10' GROUP by (er);`
+	connection.query(octoberereto,(err,result)=>{
+		res.send(result)
+	})
+})
+
 
 
 app.listen(PORT,(req,res)=>{
