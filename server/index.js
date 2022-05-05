@@ -792,6 +792,95 @@ app.get("/thismonthreasonreport",(req,res)=>{
 
 })
 
+// January Month Reason Report 
+app.get("/januaryreason",(req,res)=>{
+	const januaryreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='1' GROUP BY reason;`
+	connection.query(januaryreason,(err,result)=>{
+		res.send(result)
+	})
+})
+
+// February Month Reason Report 
+app.get("/februaryreason",(req,res)=>{
+	const februaryreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='2' GROUP BY reason;`
+	connection.query(februaryreason,(err,result)=>{
+		res.send(result)
+	})
+})
+
+// March Month Reason Report 
+app.get("/marchreason",(req,res)=>{
+	const marchreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='3' GROUP BY reason;`
+	connection.query(marchreason,(err,result)=>{
+		res.send(result)
+	})
+})
+
+//  April Reason Report 
+app.get("/aprilreason",(req,res)=>{
+	const aprilreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='4' GROUP BY reason;`
+	connection.query(aprilreason,(err,result)=>{
+		res.send(result)
+	})
+})
+
+//  May Reason Report 
+app.get("/mayreason",(req,res)=>{
+	const mayreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='5' GROUP BY reason;`
+	connection.query(mayreason,(err,result)=>{
+		res.send(result)
+	})
+})
+//  June Reason Report 
+app.get("/junereason",(req,res)=>{
+	const junereason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='6' GROUP BY reason;`
+	connection.query(junereason,(err,result)=>{
+		res.send(result)
+	})
+})
+//  July Reason Report 
+app.get("/julyreason",(req,res)=>{
+	const julyreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='7' GROUP BY reason;`
+	connection.query(julyreason,(err,result)=>{
+		res.send(result)
+	})
+})
+//  August Reason Report 
+app.get("/augustreason",(req,res)=>{
+	const augustreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='8' GROUP BY reason;`
+	connection.query(augustreason,(err,result)=>{
+		res.send(result)
+	})
+})
+//  September Reason Report 
+app.get("/septemberreason",(req,res)=>{
+	const septemberreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='9' GROUP BY reason;`
+	connection.query(septemberreason,(err,result)=>{
+		res.send(result)
+	})
+})
+//  October Reason Report 
+app.get("/octoberreason",(req,res)=>{
+	const octoberreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='10' GROUP BY reason;`
+	connection.query(octoberreason,(err,result)=>{
+		res.send(result)
+	})
+})
+//  November Reason Report 
+app.get("/novemberreason",(req,res)=>{
+	const novemberreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='11' GROUP BY reason;`
+	connection.query(novemberreason,(err,result)=>{
+		res.send(result)
+	})
+})
+//  December Reason Report 
+app.get("/decemberreason",(req,res)=>{
+	const decemberreason=`SELECT reason, COUNT(*) AS 'total' FROM etoreasons WHERE month='12' GROUP BY reason;`
+	connection.query(decemberreason,(err,result)=>{
+		res.send(result)
+	})
+})
+
 
 
 app.listen(PORT,(req,res)=>{

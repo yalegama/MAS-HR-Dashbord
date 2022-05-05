@@ -5,6 +5,11 @@ import ReactApexChart from 'react-apexcharts';
 import "../Reasons/Reasons.css"
 import axios from 'axios';
 import Footer from 'examples/Footer';
+import JanuaryReasons from './components/JanuaryReasons';
+import FebruaryReasons from './components/FebruaryReasons';
+import MarchReasons from './components/MarchReasons';
+import AprilReasons from './components/AprilReasons';
+import MayReasons from './components/MayReasons';
 
 function Reasons() {
 
@@ -57,6 +62,15 @@ function Reasons() {
           <DashboardNavbar/>
           <div className='rowOne'>
           <ReactApexChart options={options} series={series} type="pie" width={980} />
+          </div>
+          <div className='barChart'>
+            <JanuaryReasons/>
+            <FebruaryReasons/>
+            <MarchReasons/>
+            <AprilReasons/>
+          </div>
+          <div className='barChart'>
+            <MayReasons/>
           </div>
           <Footer/>
       </DashboardLayout>

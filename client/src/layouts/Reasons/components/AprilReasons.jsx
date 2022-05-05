@@ -2,18 +2,18 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import ReactApexChart from 'react-apexcharts';
 
-function BarChartMonth() {
+function AprilReasons() {
     const [data, setdata] = useState([]);
     const [areaDetails, setareaDetails] = useState([]);
     const [areaCount, setareaCount] = useState([]);
   
   
     const locadData=async ()=>{
-        const response=await axios.get("http://localhost:3001/thismonthreasonreport");
+        const response=await axios.get("http://localhost:3001/aprilreason");
         setdata(response.data);
         for(const obj of response.data){
           areaDetails.push(obj.reason);
-          areaCount.push(obj.reasoncount);
+          areaCount.push(obj.total);
         }
     }
   
@@ -46,6 +46,9 @@ function BarChartMonth() {
             }
           }
         },
+        title: {
+          text: "Current Month Area ETO %"
+        },
         dataLabels: {
           formatter(val, opts) {
             const name = opts.w.globals.labels[opts.seriesIndex]
@@ -58,9 +61,9 @@ function BarChartMonth() {
       }
   return (
     <div>
-        <ReactApexChart options={options} series={series} type="pie" width={880}/>
+         <ReactApexChart options={options} series={series} type="pie" width={380}/>
     </div>
   )
 }
 
-export default BarChartMonth
+export default AprilReasons
