@@ -955,6 +955,47 @@ app.get("/octoberereto",(req,res)=>{
 	})
 })
 
+//------each month report------
+
+// january report
+app.get("/januaryreport",(req,res)=>{
+	const januaryreport=`SELECT teamarea, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='1' AND  etopercentage!='#n/a' GROUP by (teamarea) ORDER BY etopercentage DESC;`
+	connection.query(januaryreport,(err,result)=>{
+		res.send(result)
+	})
+})
+
+// february report
+app.get("/frebruaryreport",(req,res)=>{
+	const frebruaryreport=`SELECT teamarea, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='2' AND  etopercentage!='#n/a' GROUP by (teamarea) ORDER BY etopercentage DESC;`
+	connection.query(frebruaryreport,(err,result)=>{
+		res.send(result)
+	})
+})
+
+// march report
+app.get("/marchreport",(req,res)=>{
+	const marchreport=`SELECT teamarea, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='3' AND  etopercentage!='#n/a' GROUP by (teamarea) ORDER BY etopercentage DESC;`
+	connection.query(marchreport,(err,result)=>{
+		res.send(result)
+	})
+})
+
+// April report
+app.get("/aprilreport",(req,res)=>{
+	const aprilreport=`SELECT teamarea, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='4' AND  etopercentage!='#n/a' GROUP by (teamarea) ORDER BY etopercentage DESC;`
+	connection.query(aprilreport,(err,result)=>{
+		res.send(result)
+	})
+})
+
+// May report
+app.get("/mayreport",(req,res)=>{
+	const mayreport=`SELECT teamarea, sum(etopercentage) AS 'eto' FROM etoreport WHERE month='5' AND  etopercentage!='#n/a' GROUP by (teamarea) ORDER BY etopercentage DESC;`
+	connection.query(mayreport,(err,result)=>{
+		res.send(result)
+	})
+})
 
 
 app.listen(PORT,(req,res)=>{
