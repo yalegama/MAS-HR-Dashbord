@@ -955,7 +955,9 @@ app.get("/octoberereto",(req,res)=>{
 	})
 })
 
+//=============================//
 //------each month report------
+//=============================//
 
 // january report
 app.get("/januaryreport",(req,res)=>{
@@ -997,6 +999,26 @@ app.get("/mayreport",(req,res)=>{
 	})
 })
 
+//-------------------Action Plan----------------//
+       //-----------Routes and Links--------//
+	      //------- creating method------//
+
+app.get("/creatingactionplan",(req,res)=>{
+	const sqlInsert="INSERT INTO actionplan(name,plan,date) VALUES ('nadun','abcd','2020')"
+	connection.query(sqlInsert,(err,result)=>{
+		res.send(result)
+	})
+})
+
+//-------------------Action Plan----------------//
+       //-----------Routes and Links--------//
+	      //------- creating method------//
+app.get("/api/get",(req,res)=>{
+	const readSql="SELECT * FROM actionplan"
+	connection.query(readSql,(err,result)=>{
+		res.send(result);
+	})
+})
 
 app.listen(PORT,(req,res)=>{
 	console.log(`Server is started on ${PORT}`)
